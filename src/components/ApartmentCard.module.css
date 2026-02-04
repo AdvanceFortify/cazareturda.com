@@ -16,17 +16,19 @@
 
 .imageWrapper {
   position: relative;
-  height: 250px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
+  background-color: #f3f4f6;
 }
 
 .image {
-  object-fit: cover;
-  transition: transform var(--transition-slow);
+  object-fit: contain;
+  transition: opacity var(--transition-base);
 }
 
 .card:hover .image {
-  transform: scale(1.05);
+  opacity: 0.95;
 }
 
 .badge {
@@ -100,7 +102,7 @@
 
 @media (max-width: 768px) {
   .imageWrapper {
-    height: 200px;
+    aspect-ratio: 4 / 3;
   }
   
   .footer {
