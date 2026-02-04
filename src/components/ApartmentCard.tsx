@@ -13,7 +13,7 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
       <div className={styles.imageWrapper}>
         <Image
           src={apartment.heroImage}
-          alt={`${apartment.name} - cazare Turda`}
+          alt={apartment.heroImageAlt}
           fill
           className={styles.image}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

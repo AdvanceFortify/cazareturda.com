@@ -20,9 +20,10 @@ export const metadata: Metadata = {
     url: 'https://cazareturda.com',
     images: [
       {
-        url: 'https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg',
+        url: 'https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp',
         width: 1200,
         height: 630,
+        alt: 'Cazare în Turda aproape de Salina Turda – apartamente moderne pentru turiști',
       },
     ],
   },
@@ -55,7 +56,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LodgingBusiness',
   name: 'Cazare Turda',
-  image: 'https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg',
+  image: 'https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp',
   '@id': 'https://cazareturda.com',
   url: 'https://cazareturda.com',
   telephone: '+40748979607',
@@ -101,8 +102,8 @@ export default function HomePage() {
       <Hero
         title="Cazare Turda – Apartamente moderne lângă Salina Turda"
         subtitle="Descoperă confortul apartamentelor în regim hotelier, situate strategic în Turda. Locații centrale, dotări complete și prețuri accesibile."
-        imageUrl="https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg"
-        imageAlt="Salina Turda - Atracție turistică principală"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
+        imageAlt="Cazare în Turda aproape de Salina Turda – apartamente moderne pentru turiști"
       >
         <a 
           href={getWhatsAppLink(mainWhatsApp, 'Bună! Vreau să rezerv un apartament în Turda.')}

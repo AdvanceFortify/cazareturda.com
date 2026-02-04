@@ -4,6 +4,7 @@ export interface Apartment {
   slug: string;
   shortKicker: string;
   heroImage: string;
+  heroImageAlt: string;
   galleryImages: string[];
   whatsappNumber: string;
   bookingUrl: string;
@@ -28,7 +29,8 @@ export const apartments: Apartment[] = [
     name: 'Apartament Maysa',
     slug: 'apartamente/ap-maysa',
     shortKicker: 'La 20m de Salina Turda',
-    heroImage: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0088.jpg',
+    heroImage: '/images/apartamente-salina-turda.jpg',
+    heroImageAlt: 'Apartament Maysa – cazare în Turda aproape de Salina Turda',
     galleryImages: [
       'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0088.jpg',
       'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20240903-WA0026.jpg',
@@ -72,7 +74,8 @@ export const apartments: Apartment[] = [
     name: 'Apartament La Pale',
     slug: 'apartamente/ap-lapale',
     shortKicker: 'Renovare LUX, Zonă Liniștită',
-    heroImage: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0097.jpg',
+    heroImage: '/images/la-pale-living1.jpg',
+    heroImageAlt: 'Apartament La Pale – cazare modernă în Turda, zonă liniștită',
     galleryImages: [
       'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0097.jpg',
       'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0099.jpg',
@@ -118,7 +121,8 @@ export const apartments: Apartment[] = [
     name: 'Salin Gold',
     slug: 'apartamente/ap-salin-gold',
     shortKicker: 'Premium & Elegant',
-    heroImage: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0024.jpg',
+    heroImage: '/images/cazare-salin-gold.jpg',
+    heroImageAlt: 'Salin Gold – apartament premium pentru cazare în Turda',
     galleryImages: [
       'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0024.jpg',
       'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0027.jpg',
