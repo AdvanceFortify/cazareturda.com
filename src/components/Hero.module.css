@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 700px;
+  min-height: 86vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@
 
 .image {
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 70%;
 }
 
 .overlay {
@@ -32,6 +32,13 @@
     rgba(0, 0, 0, 0.6)
   );
   z-index: 1;
+}
+
+/* Wide screens (16:9 and wider) */
+@media (min-aspect-ratio: 16/9) {
+  .hero {
+    min-height: 100vh;
+  }
 }
 
 .content {
@@ -71,7 +78,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 550px;
+    min-height: 92vh;
   }
   
   .hero.compact {
@@ -79,7 +86,7 @@
   }
   
   .image {
-    object-position: center 35%;
+    object-position: center 82%;
   }
   
   .title {
@@ -98,7 +105,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 450px;
+    min-height: 92vh;
   }
   
   .hero.compact {

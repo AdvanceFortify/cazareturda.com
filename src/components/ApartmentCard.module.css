@@ -1,34 +1,41 @@
 .card {
   background-color: white;
-  border-radius: var(--radius-lg);
+  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 280ms ease, box-shadow 280ms ease;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
-}
-
 .imageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  background-color: #f3f4f6;
+  background-color: #f1f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image {
   object-fit: contain;
-  transition: opacity var(--transition-base);
+  object-position: center;
+  transition: transform 280ms ease;
 }
 
-.card:hover .image {
-  opacity: 0.95;
+/* Hover effects - desktop only */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .card:hover .image {
+    transform: scale(1.03);
+  }
 }
 
 .badge {
@@ -102,7 +109,7 @@
 
 @media (max-width: 768px) {
   .imageWrapper {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 5;
   }
   
   .footer {
