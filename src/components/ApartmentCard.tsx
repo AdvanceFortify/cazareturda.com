@@ -5,9 +5,10 @@ import type { Apartment } from '@/data/apartments';
 
 interface ApartmentCardProps {
   apartment: Apartment;
+  ctaText?: string;
 }
 
-export default function ApartmentCard({ apartment }: ApartmentCardProps) {
+export default function ApartmentCard({ apartment, ctaText = 'Vezi Detalii' }: ApartmentCardProps) {
   return (
     <article className={styles.card}>
       <div className={styles.imageWrapper}>
@@ -42,7 +43,7 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
         <div className={styles.footer}>
           <span className={styles.price}>{apartment.priceRange}</span>
           <Link href={`/${apartment.slug}`} className="btn btn-primary">
-            Vezi Detalii
+            {ctaText}
           </Link>
         </div>
       </div>
