@@ -11,7 +11,7 @@ import styles from '../../apartment.module.css';
 const apartment = getApartmentBySlug('apartamente/ap-lapale')!;
 
 export const metadata: Metadata = {
-  title: 'Apartament La Pale Turda - Renovare LUX, Zonă Liniștită',
+  title: 'Apartament La Pale Turda - Renovare LUX , Zonă Liniștită',
   description: 'Apartament La Pale - renovare de lux, design modern, zonă liniștită. Ideal pentru familii și sejururi mai lungi. La 10 min de Salina Turda.',
   alternates: {
     canonical: 'https://cazareturda.com/apartamente/ap-lapale',
