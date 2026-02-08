@@ -39,7 +39,7 @@ export default function CazareLangaSalinaPage() {
       <Hero
         title="Cazare lângă Salina Turda"
         subtitle="Apartamente moderne la 5-10 minute de cea mai vizitată atracție din Transilvania"
-        imageUrl="https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg"
+        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Cazare aproape de Salina Turda"
         compact
       />

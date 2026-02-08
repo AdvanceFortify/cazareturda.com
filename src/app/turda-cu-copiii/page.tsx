@@ -37,7 +37,7 @@ export default function TurdaCuCopiiiPage() {
       <Hero
         title="Turda cu Copiii"
         subtitle="Ghid complet pentru familii: atracții, cazare, activități și sfaturi practice"
-        imageUrl="https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg"
+        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Turda cu copiii - vacanță în familie"
         compact
       />

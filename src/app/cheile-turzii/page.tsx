@@ -64,7 +64,7 @@ export default function CheileTurziiPage() {
       <Hero
         title="Cheile Turzii"
         subtitle="Rezervație naturală spectaculoasă la 15 km de Turda: stânci de 300m, trasee drumeții și peisaje de vis"
-        imageUrl="https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg"
+        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Cheile Turzii - rezervație naturală"
         compact
       />

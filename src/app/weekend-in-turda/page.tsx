@@ -18,7 +18,7 @@ export default function WeekendTurdaPage() {
       <Hero
         title="Weekend Perfect în Turda"
         subtitle="Itinerariu complet pentru 2-3 zile: atracții, restaurante, cazare și activități"
-        imageUrl="https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg"
+        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Weekend în Turda"
         compact
       />

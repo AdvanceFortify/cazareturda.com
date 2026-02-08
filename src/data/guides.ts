@@ -34,7 +34,7 @@ Parcarea la Salina Turda este de 5 lei pe zi. Recomandăm să ajungi dimineața 
     `,
     publishedAt: '2026-01-15',
     category: 'Transport',
-    imageUrl: 'https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg',
+    imageUrl: 'https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp',
   },
   {
     slug: 'cele-mai-bune-restaurante-turda',
@@ -61,7 +61,7 @@ După o zi de explorare, relaxează-te în unul dintre [apartamentele noastre mo
     `,
     publishedAt: '2026-01-20',
     category: 'Food & Drinks',
-    imageUrl: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0088.jpg',
+    imageUrl: 'https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp',
   },
   {
     slug: 'program-salina-turda-2026',
@@ -89,7 +89,7 @@ Cea mai bună perioadă pentru vizită este dimineața între 9-11, când este m
     `,
     publishedAt: '2026-01-25',
     category: 'Atracții',
-    imageUrl: 'https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg',
+    imageUrl: 'https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp',
   },
 ];
 

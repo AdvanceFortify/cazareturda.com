@@ -39,7 +39,7 @@ export default function ApartamenteTurdaPage() {
       <Hero
         title="Apartamente în Turda"
         subtitle="Regim hotelier modern: confort, spațiu și prețuri accesibile în inima Transilvaniei"
-        imageUrl="https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0088.jpg"
+        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Apartamente moderne Turda"
         compact
       />

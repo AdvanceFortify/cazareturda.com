@@ -19,7 +19,7 @@ export default function RegimHotelierPage() {
       <Hero
         title="Regim Hotelier în Turda"
         subtitle="Combinația perfectă: confortul apartamentului tău cu serviciile unui hotel"
-        imageUrl="https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0097.jpg"
+        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Regim hotelier Turda"
         compact
       />

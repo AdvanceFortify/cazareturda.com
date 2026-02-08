@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Ce să faci în Turda - Ghid Activități',
     description: 'Descoperă cele mai interesante activități și experiențe în Turda.',
     url: 'https://cazareturda.com/ce-sa-faci-in-turda',
-    images: [{ url: 'https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg' }],
+    images: [{ url: 'https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp' }],
   },
 };
 
@@ -47,7 +47,7 @@ export default function CeSaFaciTurdaPage() {
       <Hero
         title="Ce să faci în Turda"
         subtitle="Ghid complet cu activități, restaurante, shopping și agrement pentru un sejur perfect"
-        imageUrl="https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg"
+        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Activități în Turda"
         compact
       />

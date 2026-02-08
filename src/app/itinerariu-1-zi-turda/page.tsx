@@ -18,7 +18,7 @@ export default function Itinerariu1ZiTurdaPage() {
       <Hero
         title="Itinerariu 1 Zi în Turda"
         subtitle="Ghid complet cu orar: maximizează experiența într-o singură zi"
-        imageUrl="https://cazareturda.com/wp-content/uploads/2025/12/SalinaTurda02.jpg"
+        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Itinerariu Turda"
         compact
       />
