@@ -36,7 +36,7 @@ const faqItems = [
   },
   {
     question: 'Cât de departe sunt apartamentele de Salina Turda?',
-    answer: 'Apartamentele Maysa și Salin Gold sunt la doar 5 minute cu mașina de Salina Turda, iar Apartamentul La Pale la aproximativ 10 minute. Toate sunt situate strategic pentru acces rapid la atracții.',
+    answer: 'Apartamentele Maysa și Salin Gold sunt situate la aproximativ 1 minut pe jos de intrarea în Salina Turda. Apartamentul La Pale se află la aproximativ 10 minute cu mașina. Pentru Maysa și Salin Gold nu este necesară mașina.',
   },
   {
     question: 'Este disponibilă parcare?',
@@ -44,7 +44,7 @@ const faqItems = [
   },
   {
     question: 'Pot face check-in târziu?',
-    answer: 'Da, oferim flexibilitate la check-in. Vă rugăm să ne contactați pe WhatsApp pentru a stabili ora sosirii.',
+    answer: 'Da, check-in-ul se poate face oricând. Toate apartamentele folosesc self check-in: cheia se află într-un seif, iar codul de acces este furnizat de proprietar înainte de sosire.',
   },
   {
     question: 'Sunt apartamentele potrivite pentru familii cu copii?',
@@ -169,24 +169,26 @@ export default function HomePage() {
               <div className={styles.chooseItem}>
                 <h3>🏠 Pentru Cupluri</h3>
                 <p>
-                  <Link href="/apartamente/ap-maysa">Apartamentul Maysa</Link> sau{' '}
-                  <Link href="/apartamente/ap-salin-gold">Salin Gold</Link> sunt perfecte pentru cupluri. 
-                  Design modern, locație centrală și toate facilitățile necesare pentru un sejur romantic.
+                  Apartamentele <Link href="/apartamente/ap-maysa">Maysa</Link>,{' '}
+                  <Link href="/apartamente/ap-salin-gold">Salin Gold</Link> și{' '}
+                  <Link href="/apartamente/ap-lapale">La Pale</Link> sunt potrivite pentru cupluri. 
+                  Design modern, locație excelentă și toate facilitățile necesare pentru un sejur confortabil.
                 </p>
               </div>
               <div className={styles.chooseItem}>
                 <h3>👨‍👩‍👧‍👦 Pentru Familii</h3>
                 <p>
-                  <Link href="/apartamente/ap-lapale">Apartamentul La Pale</Link> oferă spațiu generos, 
-                  ideal pentru familii de 2-4 persoane. Renovare de lux, balcon și zonă liniștită.
+                  Toate cele 3 apartamente sunt potrivite pentru familii. 
+                  Apartamentul <Link href="/apartamente/ap-lapale">La Pale</Link> este ideal pentru familii de până la 3 persoane. 
+                  Pentru grupuri mai mari, <Link href="/apartamente/ap-salin-gold">Salin Gold</Link> + <Link href="/apartamente/ap-maysa">Maysa</Link> pot fi combinate pentru maximum 8 persoane.
                 </p>
               </div>
               <div className={styles.chooseItem}>
                 <h3>📍 Aproape de Salină</h3>
                 <p>
-                  Toate apartamentele sunt situate la maximum 10 minute de{' '}
-                  <Link href="/salina-turda">Salina Turda</Link>. 
-                  Maysa și Salin Gold sunt la doar 5 minute cu mașina.
+                  Toate apartamentele sunt foarte aproape de{' '}
+                  <Link href="/salina-turda">Salina Turda</Link> — maximum 2 minute pe jos. 
+                  Nu este necesară mașina pentru a ajunge la intrarea în Salină.
                 </p>
               </div>
               <div className={styles.chooseItem}>
