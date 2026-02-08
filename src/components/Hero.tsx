@@ -29,6 +29,10 @@ export default function Hero({
           className={styles.image}
           sizes="100vw"
           quality={85}
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
         />
         <div className={styles.overlay} />
       </div>

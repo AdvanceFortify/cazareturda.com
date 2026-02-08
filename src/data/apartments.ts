@@ -122,28 +122,40 @@ export const apartments: Apartment[] = [
     heroImageAlt: 'Apartament La Pale – cazare modernă în Turda, zonă liniștită',
     galleryImages: [
       {
-        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0097.jpg',
-        alt: 'Apartament La Pale – living modern cu design elegant'
+        src: '/images/lapale/IMG-20251210-WA0043.jpg',
+        alt: 'Cazare Turda – Apartament La Pale, living modern aproape de Salina Turda'
       },
       {
-        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0099.jpg',
-        alt: 'Apartament La Pale – bucătărie complet utilată'
+        src: '/images/lapale/IMG-20251210-WA0064.jpg',
+        alt: 'Dormitor elegant Apartament La Pale – cazare Turda aproape de Salina'
       },
       {
-        src: 'https://cazareturda.com/wp-content/uploads/2025/12/la-pale.png',
-        alt: 'Apartament La Pale – zonă liniștită în Turda'
+        src: '/images/lapale/IMG-20251210-WA0068.jpg',
+        alt: 'Dormitor matrimonial Apartament La Pale – cazare confortabilă în Turda'
       },
       {
-        src: 'https://cazareturda.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-04-19-at-18.21.40_f2e5c57f-scaled.jpg',
-        alt: 'Apartament La Pale – dormitor modern cu pat matrimonial'
+        src: '/images/lapale/IMG-20251210-WA0072.jpg',
+        alt: 'Living spațios Apartament La Pale – ideal pentru familii în Turda'
       },
       {
-        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0115.jpg',
-        alt: 'Apartament La Pale – baie modernă și curată'
+        src: '/images/lapale/IMG-20251210-WA0073.jpg',
+        alt: 'Zonă de relaxare Apartament La Pale – cazare modernă lângă Salina Turda'
       },
       {
-        src: 'https://cazareturda.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-04-19-at-18.21.40_de148ee0-scaled.jpg',
-        alt: 'Apartament La Pale – balcon spațios pentru relaxare'
+        src: '/images/lapale/IMG-20251210-WA0111.jpg',
+        alt: 'Baie modernă Apartament La Pale – cazare Turda cu dotări premium'
+      },
+      {
+        src: '/images/lapale/IMG-20251210-WA0112.jpg',
+        alt: 'Baie elegantă Apartament La Pale – cazare Turda aproape de Salina'
+      },
+      {
+        src: '/images/lapale/IMG-20251210-WA0117.jpg',
+        alt: 'Hol Apartament La Pale – cazare modernă și curată în Turda'
+      },
+      {
+        src: '/images/lapale/WhatsApp Image 2025-04-19 at 18.21.40_de148ee0.jpg',
+        alt: 'Balcon Apartament La Pale – vedere liniștită, cazare Turda'
       },
     ],
     whatsappNumber: '+40 752 951 061',
@@ -187,20 +199,32 @@ export const apartments: Apartment[] = [
     heroImageAlt: 'Salin Gold – apartament premium pentru cazare în Turda',
     galleryImages: [
       {
-        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0024.jpg',
-        alt: 'Salin Gold – design interior premium cu finisaje elegante'
+        src: '/images/salingold/IMG-20250128-WA0008.jpg',
+        alt: 'Salin Gold – apartament premium în Turda, cazare lângă Salina Turda'
       },
       {
-        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0027.jpg',
-        alt: 'Salin Gold – living modern cu stil elegant gold'
+        src: '/images/salingold/IMG-20250128-WA0009 .jpg',
+        alt: 'Cazare Turda lângă Salina Turda – Salin Gold, interior modern și elegant'
       },
       {
-        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0032.jpg',
-        alt: 'Salin Gold – bucătărie modernă complet utilată'
+        src: '/images/salingold/IMG-20250128-WA0012 .jpg',
+        alt: 'Salin Gold Turda – dormitor modern pentru sejur confortabil lângă Salina Turda'
       },
       {
-        src: 'https://cazareturda.com/wp-content/uploads/2025/11/IMG-20250128-WA0014.jpg',
-        alt: 'Salin Gold – apartament premium lângă Salina Turda'
+        src: '/images/salingold/IMG-20250128-WA0013.jpg',
+        alt: 'Apartament Salin Gold – spațiu luminos, cazare premium în Turda'
+      },
+      {
+        src: '/images/salingold/IMG-20250128-WA0014.jpg',
+        alt: 'Cazare lângă Salina Turda – Salin Gold, design modern și finisaje elegante'
+      },
+      {
+        src: '/images/salingold/IMG-20250128-WA0015.jpg',
+        alt: 'Salin Gold – apartament modern în Turda cu self check-in, aproape de Salina Turda'
+      },
+      {
+        src: '/images/salingold/IMG-20250128-WA0016.jpg',
+        alt: 'Salin Gold Turda – detalii premium, cazare ideală lângă Salina Turda'
       },
     ],
     whatsappNumber: '+40 740 865 386',
