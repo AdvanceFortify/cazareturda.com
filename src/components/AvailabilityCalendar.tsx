@@ -99,32 +99,52 @@ export default function AvailabilityCalendar({
   blockedDates,
   title = 'Disponibilitate (sincronizat automat cu Booking)',
 }: AvailabilityCalendarProps) {
+  const [viewDate, setViewDate] = useState(new Date());
   const blockedSet = new Set(blockedDates);
   const today = new Date();
-  const currentMonth = today.getMonth();
-  const currentYear = today.getFullYear();
   
-  // Get 3 months: current, next, next+1
-  const months = [
-    { month: currentMonth, year: currentYear },
-    { 
-      month: currentMonth === 11 ? 0 : currentMonth + 1, 
-      year: currentMonth === 11 ? currentYear + 1 : currentYear 
-    },
-    { 
-      month: currentMonth >= 10 ? (currentMonth + 2) % 12 : currentMonth + 2, 
-      year: currentMonth >= 10 ? currentYear + 1 : currentYear 
-    },
-  ];
+  const currentYear = viewDate.getFullYear();
+  const currentMonth = viewDate.getMonth();
   
-  const renderMonth = (monthInfo: { month: number; year: number }, index: number) => {
-    const monthDays = getDaysInMonth(monthInfo.month, monthInfo.year, blockedSet, today);
-    
-    return (
-      <div key={index} className={styles.monthContainer}>
-        <h3 className={styles.monthTitle}>
-          {MONTH_NAMES[monthInfo.month]} {monthInfo.year}
-        </h3>
+  const prevMonth = () => {
+    setViewDate(new Date(currentYear, currentMonth - 1, 1));
+  };
+  
+  const nextMonth = () => {
+    setViewDate(new Date(currentYear, currentMonth + 1, 1));
+  };
+  
+  const monthDays = getDaysInMonth(currentYear, currentMonth, blockedSet, today);
+  
+  return (
+    <div className={styles.calendar}>
+      {title && <h2 className={styles.title}>{title}</h2>}
+      
+      <div className={styles.calendarCard}>
+        <div className={styles.navigation}>
+          <button 
+            onClick={prevMonth}
+            className={styles.navButton}
+            aria-label="Luna anterioară"
+          >
+            <span className={styles.arrow}>◀</span>
+            <span className={styles.navLabel}>Înapoi</span>
+          </button>
+          
+          <h3 className={styles.monthTitle}>
+            {MONTH_NAMES[currentMonth]} {currentYear}
+          </h3>
+          
+          <button 
+            onClick={nextMonth}
+            className={styles.navButton}
+            aria-label="Luna următoare"
+          >
+            <span className={styles.navLabel}>Înainte</span>
+            <span className={styles.arrow}>▶</span>
+          </button>
+        </div>
+        
         <div className={styles.weekdays}>
           {WEEKDAYS.map((day, idx) => (
             <div key={idx} className={styles.weekday}>
@@ -132,6 +152,7 @@ export default function AvailabilityCalendar({
             </div>
           ))}
         </div>
+        
         <div className={styles.daysGrid}>
           {monthDays.map((dayInfo, idx) => {
             const isPast = dayInfo.date < today && !dayInfo.isToday;
@@ -156,15 +177,9 @@ export default function AvailabilityCalendar({
           })}
         </div>
       </div>
-    );
-  };
-  
-  return (
-    <div className={styles.calendar}>
-      {title && <h2 className={styles.title}>{title}</h2>}
       
-      <div className={styles.monthsContainer}>
-        {months.map((monthInfo, index) => renderMonth(monthInfo, index))}
+      <div className={styles.priceInfo}>
+        <span className={styles.priceBadge}>Preț: 200 lei / noapte</span>
       </div>
       
       <div className={styles.legend}>
