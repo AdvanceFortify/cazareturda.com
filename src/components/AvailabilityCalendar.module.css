@@ -1,0 +1,262 @@
+.calendar {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 32px);
+  overflow-x: hidden;
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  color: var(--color-text);
+}
+
+.monthsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  margin-bottom: var(--spacing-xl);
+  max-width: 100%;
+  align-items: start;
+}
+
+.monthContainer {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.monthTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  color: var(--color-text);
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: var(--spacing-sm);
+  width: 100%;
+  max-width: 100%;
+}
+
+.weekday {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.dayCell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.dayNumber {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.dayLabel {
+  font-size: 0.65rem;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.available {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.booked {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+  cursor: not-allowed;
+}
+
+.blocked {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+  cursor: not-allowed;
+}
+
+.otherMonth {
+  opacity: 0.3;
+}
+
+.otherMonth .dayLabel {
+  display: none;
+}
+
+.past {
+  opacity: 0.5;
+}
+
+.today {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-base);
+}
+
+.legendColor {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.legendAvailable {
+  background-color: #e8f5e9;
+}
+
+.legendBooked {
+  background-color: #ffebee;
+}
+
+.legendBlocked {
+  background-color: #ffebee;
+}
+
+/* Tablet */
+@media (max-width: 968px) {
+  .monthsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .calendar {
+    padding: 0 clamp(12px, 2.5vw, 24px);
+  }
+  
+  .monthContainer {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .calendar {
+    padding: 0 clamp(12px, 2vw, 16px);
+    max-width: 100%;
+  }
+  
+  .monthsContainer {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .monthContainer {
+    max-width: 100%;
+    padding: var(--spacing-sm);
+  }
+  
+  .dayCell {
+    padding: 0.15rem;
+    font-size: 0.7rem;
+  }
+  
+  .dayNumber {
+    font-size: 0.75rem;
+  }
+  
+  .dayLabel {
+    font-size: 0.6rem;
+  }
+  
+  .weekday {
+    font-size: 0.75rem;
+    padding: 0.4rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar {
+    padding: 0 12px;
+  }
+  
+  .monthContainer {
+    padding: 12px;
+  }
+  
+  .daysGrid {
+    gap: 1px;
+  }
+  
+  .weekdays {
+    gap: 1px;
+  }
+  
+  .dayCell {
+    padding: 0.1rem;
+    font-size: 0.65rem;
+  }
+  
+  .dayNumber {
+    font-size: 0.7rem;
+  }
+  
+  .dayLabel {
+    font-size: 0.55rem;
+  }
+  
+  .weekday {
+    font-size: 0.7rem;
+    padding: 0.3rem 0;
+  }
+  
+  .legend {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}

@@ -5,7 +5,7 @@ export interface Apartment {
   shortKicker: string;
   heroImage: string;
   heroImageAlt: string;
-  galleryImages: string[];
+  galleryImages: Array<{ src: string; alt: string }>;
   whatsappNumber: string;
   bookingUrl: string;
   capacity: string;
@@ -32,10 +32,54 @@ export const apartments: Apartment[] = [
     heroImage: '/images/apartamente-salina-turda.jpg',
     heroImageAlt: 'Apartament Maysa – cazare în Turda aproape de Salina Turda',
     galleryImages: [
-      'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0088.jpg',
-      'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20240903-WA0026.jpg',
-      'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0083.jpg',
-      'https://cazareturda.com/wp-content/uploads/2025/11/IMG_20240624_120157-scaled.jpg',
+      {
+        src: "/images/Maysa/apartamente salina turda.jpg",
+        alt: "Cazare Turda lângă Salina Turda – apartament modern cu pat matrimonial și living confortabil"
+      },
+      {
+        src: "/images/Maysa/cazare-turda-langa.jpg",
+        alt: "Cazare Turda lângă Salina Turda – intrare modernă în apartament, acces rapid și sigur"
+      },
+      {
+        src: "/images/Maysa/cazare-turda-langa-salina-apartament-maysa.jpg",
+        alt: "Cazare Turda lângă Salina Turda – Apartament Maysa, design modern aproape de intrare"
+      },
+      {
+        src: "/images/Maysa/cazare-turda-langa-salina-maysa.jpg",
+        alt: "Cazare Turda lângă Salina Turda – living modern Apartament Maysa, ideal pentru cupluri"
+      },
+      {
+        src: "/images/Maysa/cazare-turda-langa-salina-maysa-baie-moderna.jpg",
+        alt: "Cazare Turda lângă Salina Turda – baie modernă, curată și complet utilată"
+      },
+      {
+        src: "/images/Maysa/cazare-turda-langa-salina-maysa-bucatarie-utilata.jpg",
+        alt: "Cazare Turda lângă Salina Turda – bucătărie complet utilată pentru sejur confortabil"
+      },
+      {
+        src: "/images/Maysa/cazare-turda-langa-salina-maysa-design-modern.jpg",
+        alt: "Cazare Turda lângă Salina Turda – design interior modern și spațios în Apartament Maysa"
+      },
+      {
+        src: "/images/Maysa/cazare-turda-langa-salina-maysa-dormitor-modern.jpg",
+        alt: "Cazare Turda lângă Salina Turda – dormitor modern cu pat matrimonial și lenjerie premium"
+      },
+      {
+        src: "/images/Maysa/cazare-turda-langa-salina-maysa-intrare-apartament.jpg",
+        alt: "Cazare Turda lângă Salina Turda – self check-in cu seif pentru cheie, acces oricând"
+      },
+      {
+        src: "/images/Maysa/cazare-turda-langa-salina-maysa-living-spatios.jpg",
+        alt: "Cazare Turda lângă Salina Turda – living spațios și luminos, ideal pentru relaxare"
+      },
+      {
+        src: "/images/Maysa/cazare-turda-langa-salina-maysa-self-check-in.jpg",
+        alt: "Cazare Turda lângă Salina Turda – self check-in rapid, fără program, cod primit de la proprietar"
+      },
+      {
+        src: "/images/Maysa/langa-salina-apartament-maysa.jpg",
+        alt: "Cazare Turda lângă Salina Turda – apartament situat la 1 minut pe jos de intrare"
+      }
     ],
     whatsappNumber: '+40 748 979 607',
     bookingUrl: 'https://www.booking.com/hotel/ro/maysa-ap.ro.html',
@@ -77,12 +121,30 @@ export const apartments: Apartment[] = [
     heroImage: '/images/la-pale-living1.jpg',
     heroImageAlt: 'Apartament La Pale – cazare modernă în Turda, zonă liniștită',
     galleryImages: [
-      'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0097.jpg',
-      'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0099.jpg',
-      'https://cazareturda.com/wp-content/uploads/2025/12/la-pale.png',
-      'https://cazareturda.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-04-19-at-18.21.40_f2e5c57f-scaled.jpg',
-      'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0115.jpg',
-      'https://cazareturda.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-04-19-at-18.21.40_de148ee0-scaled.jpg',
+      {
+        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0097.jpg',
+        alt: 'Apartament La Pale – living modern cu design elegant'
+      },
+      {
+        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0099.jpg',
+        alt: 'Apartament La Pale – bucătărie complet utilată'
+      },
+      {
+        src: 'https://cazareturda.com/wp-content/uploads/2025/12/la-pale.png',
+        alt: 'Apartament La Pale – zonă liniștită în Turda'
+      },
+      {
+        src: 'https://cazareturda.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-04-19-at-18.21.40_f2e5c57f-scaled.jpg',
+        alt: 'Apartament La Pale – dormitor modern cu pat matrimonial'
+      },
+      {
+        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0115.jpg',
+        alt: 'Apartament La Pale – baie modernă și curată'
+      },
+      {
+        src: 'https://cazareturda.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-04-19-at-18.21.40_de148ee0-scaled.jpg',
+        alt: 'Apartament La Pale – balcon spațios pentru relaxare'
+      },
     ],
     whatsappNumber: '+40 752 951 061',
     bookingUrl: 'https://www.booking.com/hotel/ro/apartament-lapale.ro.html',
@@ -124,10 +186,22 @@ export const apartments: Apartment[] = [
     heroImage: '/images/cazare-salin-gold.jpg',
     heroImageAlt: 'Salin Gold – apartament premium pentru cazare în Turda',
     galleryImages: [
-      'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0024.jpg',
-      'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0027.jpg',
-      'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0032.jpg',
-      'https://cazareturda.com/wp-content/uploads/2025/11/IMG-20250128-WA0014.jpg',
+      {
+        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0024.jpg',
+        alt: 'Salin Gold – design interior premium cu finisaje elegante'
+      },
+      {
+        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0027.jpg',
+        alt: 'Salin Gold – living modern cu stil elegant gold'
+      },
+      {
+        src: 'https://cazareturda.com/wp-content/uploads/2025/12/IMG-20251210-WA0032.jpg',
+        alt: 'Salin Gold – bucătărie modernă complet utilată'
+      },
+      {
+        src: 'https://cazareturda.com/wp-content/uploads/2025/11/IMG-20250128-WA0014.jpg',
+        alt: 'Salin Gold – apartament premium lângă Salina Turda'
+      },
     ],
     whatsappNumber: '+40 740 865 386',
     bookingUrl: 'https://www.booking.com/hotel/ro/salin-gold-ap.ro.html',

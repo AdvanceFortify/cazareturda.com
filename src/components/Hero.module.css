@@ -9,7 +9,9 @@
 }
 
 .hero.compact {
-  min-height: 400px;
+  min-height: clamp(520px, 65vh, 820px);
+  max-height: 900px;
+  aspect-ratio: 16 / 9;
 }
 
 .imageWrapper {
@@ -21,6 +23,11 @@
 .image {
   object-fit: cover;
   object-position: center 70%;
+}
+
+/* Apartment detail page image positioning */
+.compact .image {
+  object-position: center 60%;
 }
 
 .overlay {
@@ -38,6 +45,13 @@
 @media (min-aspect-ratio: 16/9) {
   .hero {
     min-height: 100vh;
+  }
+}
+
+/* Ultrawide screens for apartment detail pages */
+@media (min-width: 1600px) {
+  .compact .image {
+    object-position: center 70%;
   }
 }
 
@@ -82,11 +96,16 @@
   }
   
   .hero.compact {
-    min-height: 350px;
+    min-height: 420px;
+    aspect-ratio: 3 / 4;
   }
   
   .image {
     object-position: center 82%;
+  }
+  
+  .compact .image {
+    object-position: center 50%;
   }
   
   .title {
@@ -109,6 +128,6 @@
   }
   
   .hero.compact {
-    min-height: 300px;
+    min-height: 420px;
   }
 }

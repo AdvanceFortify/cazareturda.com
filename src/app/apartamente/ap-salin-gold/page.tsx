@@ -52,7 +52,7 @@ const jsonLd = {
   '@type': 'LodgingBusiness',
   name: apartment.name,
   description: apartment.longDescription,
-  image: apartment.galleryImages,
+  image: apartment.galleryImages.map(img => img.src),
   url: `https://cazareturda.com/${apartment.slug}`,
   address: {
     '@type': 'PostalAddress',
@@ -142,8 +142,8 @@ export default function SalinGoldPage() {
             {apartment.galleryImages.map((image, index) => (
               <div key={index} className={styles.galleryItem}>
                 <Image
-                  src={image}
-                  alt={`${apartment.name} - imagine ${index + 1}`}
+                  src={image.src}
+                  alt={image.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className={styles.galleryImage}

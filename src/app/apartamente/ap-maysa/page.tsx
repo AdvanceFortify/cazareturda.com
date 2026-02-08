@@ -5,10 +5,12 @@ import FAQ from '@/components/FAQ';
 import SEOJsonLd from '@/components/SEOJsonLd';
 import BookingCTA from '@/components/BookingCTA';
 import NearbyAttractions from '@/components/NearbyAttractions';
+import AvailabilityCalendar from '@/components/AvailabilityCalendar';
 import { getApartmentBySlug, getWhatsAppLink } from '@/data/apartments';
 import styles from '../../apartment.module.css';
 
 const apartment = getApartmentBySlug('apartamente/ap-maysa')!;
+const BOOKING_ICS_URL = 'https://ical.booking.com/v1/export?t=b643edda-663e-4087-8e8c-ad76eb2d9a1f';
 
 export const metadata: Metadata = {
   title: 'Apartament Maysa - Cazare la 20m de Salina Turda',
@@ -52,7 +54,7 @@ const jsonLd = {
   '@type': 'LodgingBusiness',
   name: apartment.name,
   description: apartment.longDescription,
-  image: apartment.galleryImages,
+  image: apartment.galleryImages.map(img => img.src),
   url: `https://cazareturda.com/${apartment.slug}`,
   address: {
     '@type': 'PostalAddress',
@@ -83,7 +85,53 @@ const jsonLd = {
   },
 };
 
-export default function MaysaPage() {
+async function getBlockedDates(): Promise<{ blockedDates: string[]; hasError: boolean }> {
+  try {
+    // In production on Vercel, use relative URL. In dev, construct full URL
+    const baseUrl = process.env.VERCEL_URL 
+      ? `https://${process.env.VERCEL_URL}` 
+      : process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    
+    const encodedUrl = encodeURIComponent(BOOKING_ICS_URL);
+    const apiUrl = `${baseUrl}/api/booking-ics?url=${encodedUrl}`;
+    
+    console.log('Fetching blocked dates from API...');
+    
+    const response = await fetch(apiUrl, {
+      cache: 'no-store',
+    });
+    
+    const data = await response.json();
+    
+    if (!response.ok) {
+      console.error('Failed to fetch blocked dates:', response.status, data);
+      return { blockedDates: [], hasError: true };
+    }
+    
+    if (data.error) {
+      console.error('API returned error:', data.error);
+      if (data.preview) {
+        console.error('Response preview:', data.preview);
+      }
+      return { blockedDates: [], hasError: true };
+    }
+    
+    // Empty array is VALID - means no bookings, all days available
+    console.log('Blocked dates received:', data.blockedDates?.length || 0);
+    
+    return { 
+      blockedDates: data.blockedDates || [], 
+      hasError: false 
+    };
+  } catch (error) {
+    console.error('Error fetching blocked dates:', error);
+    return { blockedDates: [], hasError: true };
+  }
+}
+
+export default async function MaysaPage() {
+  const { blockedDates, hasError } = await getBlockedDates();
+  
   return (
     <>
       <SEOJsonLd data={jsonLd} />
@@ -143,8 +191,8 @@ export default function MaysaPage() {
             {apartment.galleryImages.map((image, index) => (
               <div key={index} className={styles.galleryItem}>
                 <Image
-                  src={image}
-                  alt={`${apartment.name} - imagine ${index + 1}`}
+                  src={image.src}
+                  alt={image.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className={styles.galleryImage}
@@ -152,6 +200,34 @@ export default function MaysaPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      
+      <section id="disponibilitate" className="section" style={{ backgroundColor: 'var(--color-bg-alt)' }}>
+        <div className="container">
+          {!hasError ? (
+            <AvailabilityCalendar
+              blockedDates={blockedDates}
+              title="Disponibilitate (sincronizat automat cu Booking)"
+            />
+          ) : (
+            <div style={{ textAlign: 'center', padding: 'var(--spacing-xl)', backgroundColor: 'white', borderRadius: 'var(--radius-lg)', maxWidth: '600px', margin: '0 auto' }}>
+              <h2 style={{ marginBottom: 'var(--spacing-md)', fontSize: 'var(--font-size-3xl)' }}>
+                Disponibilitate (sincronizat automat cu Booking)
+              </h2>
+              <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-lg)', marginBottom: 'var(--spacing-lg)' }}>
+                Calendar indisponibil momentan.
+              </p>
+              <a 
+                href={getWhatsAppLink(apartment.whatsappNumber, `Bună! Vreau să aflu disponibilitatea pentru ${apartment.name}.`)}
+                className="btn btn-whatsapp btn-large"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📱 Rezervă pe WhatsApp
+              </a>
+            </div>
+          )}
         </div>
       </section>
       
