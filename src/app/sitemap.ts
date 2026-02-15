@@ -5,7 +5,8 @@ import { guidePosts } from '@/data/guides';
 const BASE_URL = 'https://www.cazareturda.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Static routes discovered from app/ (excluding api, _*, layout, loading, error, not-found)
+  const now = new Date();
+
   const staticRoutes: { path: string; priority: number; changeFrequency: 'daily' | 'weekly' }[] = [
     { path: '', priority: 1.0, changeFrequency: 'daily' }, // homepage
     { path: '/salina-turda', priority: 0.8, changeFrequency: 'weekly' },
@@ -24,24 +25,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map(({ path, priority, changeFrequency }) => ({
     url: path ? `${BASE_URL}${path}` : BASE_URL,
-    lastModified: new Date(),
+    lastModified: now,
     changeFrequency,
     priority,
   }));
 
-  const apartmentEntries: MetadataRoute.Sitemap = apartments.map((apartment) => ({
-    url: `${BASE_URL}/${apartment.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.95,
-  }));
+  const apartmentEntries: MetadataRoute.Sitemap = apartments.map((apartment) => {
+    const slug = String(apartment.slug || '').replace(/^\/+/, ''); // remove leading slashes
+    return {
+      url: `${BASE_URL}/${slug}`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    };
+  });
 
-  const guideEntries: MetadataRoute.Sitemap = guidePosts.map((post) => ({
-    url: `${BASE_URL}/ghid-turda/${post.slug}`,
-    lastModified: new Date(post.publishedAt),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }));
+  const guideEntries: MetadataRoute.Sitemap = guidePosts.map((post) => {
+    const slug = String(post.slug || '').replace(/^\/+/, '');
+    return {
+      url: `${BASE_URL}/ghid-turda/${slug}`,
+      lastModified: post.publishedAt ? new Date(post.publishedAt) : now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    };
+  });
 
-  return [...staticEntries, ...apartmentEntries, ...guideEntries];
+  // ✅ Deduplicate URLs (important for SEO hygiene)
+  const all = [...staticEntries, ...apartmentEntries, ...guideEntries];
+  const dedup = Array.from(new Map(all.map((e) => [e.url, e])).values());
+
+  return dedup;
 }
