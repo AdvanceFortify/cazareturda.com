@@ -2,46 +2,46 @@ import { MetadataRoute } from 'next';
 import { apartments } from '@/data/apartments';
 import { guidePosts } from '@/data/guides';
 
+const BASE_URL = 'https://www.cazareturda.com';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cazareturda.com';
-  
-  // Static pages
-  const staticPages = [
-    '',
-    '/salina-turda',
-    '/atractii-turda',
-    '/cheile-turzii',
-    '/ce-sa-faci-in-turda',
-    '/restaurante-turda',
-    '/itinerariu-1-zi-turda',
-    '/weekend-in-turda',
-    '/cazare-langa-salina-turda',
-    '/apartamente-turda',
-    '/regim-hotelier-turda',
-    '/turda-cu-copiii',
-    '/ghid-turda',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
+  // Static routes discovered from app/ (excluding api, _*, layout, loading, error, not-found)
+  const staticRoutes: { path: string; priority: number; changeFrequency: 'daily' | 'weekly' }[] = [
+    { path: '', priority: 1.0, changeFrequency: 'daily' }, // homepage
+    { path: '/salina-turda', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/atractii-turda', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/cheile-turzii', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/ce-sa-faci-in-turda', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/restaurante-turda', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/itinerariu-1-zi-turda', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/weekend-in-turda', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/cazare-langa-salina-turda', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/apartamente-turda', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/regim-hotelier-turda', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/turda-cu-copiii', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/ghid-turda', priority: 0.8, changeFrequency: 'weekly' },
+  ];
+
+  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map(({ path, priority, changeFrequency }) => ({
+    url: path ? `${BASE_URL}${path}` : BASE_URL,
     lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1 : 0.8,
+    changeFrequency,
+    priority,
   }));
-  
-  // Apartment pages
-  const apartmentPages = apartments.map((apartment) => ({
-    url: `${baseUrl}/${apartment.slug}`,
+
+  const apartmentEntries: MetadataRoute.Sitemap = apartments.map((apartment) => ({
+    url: `${BASE_URL}/${apartment.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.95,
   }));
-  
-  // Guide posts
-  const guidePages = guidePosts.map((post) => ({
-    url: `${baseUrl}/ghid-turda/${post.slug}`,
+
+  const guideEntries: MetadataRoute.Sitemap = guidePosts.map((post) => ({
+    url: `${BASE_URL}/ghid-turda/${post.slug}`,
     lastModified: new Date(post.publishedAt),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
   }));
-  
-  return [...staticPages, ...apartmentPages, ...guidePages];
+
+  return [...staticEntries, ...apartmentEntries, ...guideEntries];
 }
