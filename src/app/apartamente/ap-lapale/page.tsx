@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   title: 'Apartament La Pale Turda - Renovare LUX , Zonă Liniștită',
   description: 'Apartament La Pale - renovare de lux, design modern, zonă liniștită. Ideal pentru familii și sejururi mai lungi. La 10 min de Salina Turda.',
   alternates: {
-    canonical: 'https://cazareturda.com/apartamente/ap-lapale',
+    canonical: 'https://www.cazareturda.com/apartamente/ap-lapale',
   },
   openGraph: {
     title: 'Apartament La Pale - Renovare LUX Turda',
     description: 'Apartament cu renovare de lux în zonă liniștită, perfect pentru familii.',
-    url: 'https://cazareturda.com/apartamente/ap-lapale',
+    url: 'https://www.cazareturda.com/apartamente/ap-lapale',
     images: [{ url: apartment.heroImage }],
   },
 };
@@ -53,7 +53,7 @@ const jsonLd = {
   name: apartment.name,
   description: apartment.longDescription,
   image: apartment.galleryImages.map(img => img.src),
-  url: `https://cazareturda.com/${apartment.slug}`,
+  url: `https://www.cazareturda.com/${apartment.slug}`,
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Turda',

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Regim Hotelier Turda - Apartamente cu Servicii Complete',
   description: 'Cazare în regim hotelier Turda: apartamente moderne cu servicii hoteliere, dotări complete, locații centrale. Prețuri avantajoase, rezervă online!',
   alternates: {
-    canonical: 'https://cazareturda.com/regim-hotelier-turda',
+    canonical: 'https://www.cazareturda.com/regim-hotelier-turda',
   },
 };
 

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Ghid Turda - Articole & Sfaturi pentru Vizitarea Turdei',
   description: 'Ghid complet Turda: articole despre atracții, transport, cazare, restaurante. Tot ce trebuie să știi pentru o vizită perfectă în Turda.',
   alternates: {
-    canonical: 'https://cazareturda.com/ghid-turda',
+    canonical: 'https://www.cazareturda.com/ghid-turda',
   },
 };
 

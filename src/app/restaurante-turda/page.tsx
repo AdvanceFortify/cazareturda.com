@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Restaurante Turda - Top Locuri Unde să Mănânci 2026',
   description: 'Ghid restaurante Turda: bucătărie românească, pizza, terase, cafenele. Recomandări verificate pentru turiști și localnici.',
   alternates: {
-    canonical: 'https://cazareturda.com/restaurante-turda',
+    canonical: 'https://www.cazareturda.com/restaurante-turda',
   },
 };
 

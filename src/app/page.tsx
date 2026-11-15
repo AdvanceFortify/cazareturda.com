@@ -12,15 +12,15 @@ export const metadata: Metadata = {
   title: 'Cazare Turda - Apartamente moderne lângă Salina Turda',
   description: 'Apartamente în regim hotelier Turda. Cazare modernă lângă Salina Turda, cu dotări complete și prețuri accesibile. Rezervă online acum!',
   alternates: {
-    canonical: 'https://cazareturda.com/',
+    canonical: 'https://www.cazareturda.com/',
   },
   openGraph: {
     title: 'Cazare Turda - Apartamente moderne lângă Salina Turda',
     description: 'Apartamente în regim hotelier Turda. Cazare modernă lângă Salina Turda.',
-    url: 'https://cazareturda.com/',
+    url: 'https://www.cazareturda.com/',
     images: [
       {
-        url: 'https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp',
+        url: 'https://www.cazareturda.com/images/cazare-turda-aproape-de-salina.webp',
         width: 1200,
         height: 630,
         alt: 'Cazare în Turda aproape de Salina Turda – apartamente moderne pentru turiști',
@@ -56,9 +56,9 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LodgingBusiness',
   name: 'Cazare Turda',
-  image: 'https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp',
-  '@id': 'https://cazareturda.com/',
-  url: 'https://cazareturda.com/',
+  image: 'https://www.cazareturda.com/images/cazare-turda-aproape-de-salina.webp',
+  '@id': 'https://www.cazareturda.com/',
+  url: 'https://www.cazareturda.com/',
   telephone: '+40748979607',
   priceRange: '150-200 lei',
   address: {

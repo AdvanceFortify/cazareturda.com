@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   title: 'Salina Turda – Ghid complet 2026',
   description: 'Ghid Salina Turda: ce vezi în interior, program și prețuri, cum ajungi, parcare, sfaturi practice. Cazare la câțiva pași de intrare. Informații utile pentru familii și cupluri.',
   alternates: {
-    canonical: 'https://cazareturda.com/salina-turda',
+    canonical: 'https://www.cazareturda.com/salina-turda',
   },
   openGraph: {
     title: 'Salina Turda – Ghid complet 2026',
     description: 'Tot ce trebuie să știi pentru o vizită la Salina Turda: program, ce vezi, cum ajungi, sfaturi și cazare aproape.',
-    url: 'https://cazareturda.com/salina-turda',
-    images: [{ url: 'https://cazareturda.com/images/apartamente-salina-turda.jpg' }],
+    url: 'https://www.cazareturda.com/salina-turda',
+    images: [{ url: 'https://www.cazareturda.com/images/apartamente-salina-turda.jpg' }],
   },
 };
 
@@ -56,7 +56,7 @@ const jsonLd = {
   '@type': 'TouristAttraction',
   name: 'Salina Turda',
   description: 'Salina Turda – parc subteran de agrement și destinație de wellness, cu roată panoramică, lac și atracții unice.',
-  image: 'https://cazareturda.com/images/apartamente-salina-turda.jpg',
+  image: 'https://www.cazareturda.com/images/apartamente-salina-turda.jpg',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Aleea Durgăului 7',

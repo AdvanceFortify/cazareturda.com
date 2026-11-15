@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Cazare lângă Salina Turda - Apartamente la 5-10 minute',
   description: 'Cazare aproape de Salina Turda: apartamente moderne la 5-10 minute cu mașina. Parcare gratuită, dotări complete, check-in flexibil. Rezervă online!',
   alternates: {
-    canonical: 'https://cazareturda.com/cazare-langa-salina-turda',
+    canonical: 'https://www.cazareturda.com/cazare-langa-salina-turda',
   },
 };
 

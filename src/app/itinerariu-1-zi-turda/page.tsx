@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Itinerariu 1 Zi Turda - Ghid Complet Cu Orar 2026',
   description: 'Itinerariu detaliat pentru o zi în Turda: Salina Turda, centrul vechi, restaurante, atracții. Optimizat pentru timp și buget.',
   alternates: {
-    canonical: 'https://cazareturda.com/itinerariu-1-zi-turda',
+    canonical: 'https://www.cazareturda.com/itinerariu-1-zi-turda',
   },
 };
 

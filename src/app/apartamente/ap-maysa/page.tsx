@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   title: 'Apartament Maysa - Cazare la 20m de Salina Turda',
   description: 'Apartament Maysa - cea mai apropiată cazare de Salina Turda, la doar 20 metri (1 min pe jos). Parter, parcare gratuită, self check-in.',
   alternates: {
-    canonical: 'https://cazareturda.com/apartamente/ap-maysa',
+    canonical: 'https://www.cazareturda.com/apartamente/ap-maysa',
   },
   openGraph: {
     title: 'Apartament Maysa - La 20m de Salina Turda',
     description: 'Cea mai apropiată cazare de Salina Turda - la doar 20 metri distanță.',
-    url: 'https://cazareturda.com/apartamente/ap-maysa',
+    url: 'https://www.cazareturda.com/apartamente/ap-maysa',
     images: [{ url: apartment.heroImage }],
   },
 };
@@ -53,7 +53,7 @@ const jsonLd = {
   name: apartment.name,
   description: apartment.longDescription,
   image: apartment.galleryImages.map(img => img.src),
-  url: `https://cazareturda.com/${apartment.slug}`,
+  url: `https://www.cazareturda.com/${apartment.slug}`,
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Turda',

@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   title: 'Atracții Turistice Turda - Top 10+ Obiective în 2026',
   description: 'Descoperă cele mai importante atracții turistice din Turda: Salina Turda, Cheile Turzii, Cetatea Potaissa și multe altele. Ghid complet cu recomandări.',
   alternates: {
-    canonical: 'https://cazareturda.com/atractii-turda',
+    canonical: 'https://www.cazareturda.com/atractii-turda',
   },
   openGraph: {
     title: 'Atracții Turistice Turda - Ghid Complet',
     description: 'Top atracții turistice în Turda și împrejurimi: Salina, Cheile Turzii, Cetatea Potaissa.',
-    url: 'https://cazareturda.com/atractii-turda',
-    images: [{ url: 'https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp' }],
+    url: 'https://www.cazareturda.com/atractii-turda',
+    images: [{ url: 'https://www.cazareturda.com/images/cazare-turda-aproape-de-salina.webp' }],
   },
 };
 

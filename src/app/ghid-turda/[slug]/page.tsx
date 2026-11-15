@@ -30,12 +30,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: post.title,
     description: post.excerpt,
     alternates: {
-      canonical: `https://cazareturda.com/ghid-turda/${post.slug}`,
+      canonical: `https://www.cazareturda.com/ghid-turda/${post.slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://cazareturda.com/ghid-turda/${post.slug}`,
+      url: `https://www.cazareturda.com/ghid-turda/${post.slug}`,
       images: [{ url: post.imageUrl }],
       type: 'article',
       publishedTime: post.publishedAt,

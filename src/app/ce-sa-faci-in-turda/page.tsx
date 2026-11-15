@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   title: 'Ce să faci în Turda - Ghid Complet Activități 2026',
   description: 'Ghid complet cu activități în Turda: atracții turistice, restaurante, shopping, sport și agrement. Recomandări pentru o experiență completă.',
   alternates: {
-    canonical: 'https://cazareturda.com/ce-sa-faci-in-turda',
+    canonical: 'https://www.cazareturda.com/ce-sa-faci-in-turda',
   },
   openGraph: {
     title: 'Ce să faci în Turda - Ghid Activități',
     description: 'Descoperă cele mai interesante activități și experiențe în Turda.',
-    url: 'https://cazareturda.com/ce-sa-faci-in-turda',
-    images: [{ url: 'https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp' }],
+    url: 'https://www.cazareturda.com/ce-sa-faci-in-turda',
+    images: [{ url: 'https://www.cazareturda.com/images/cazare-turda-aproape-de-salina.webp' }],
   },
 };
 

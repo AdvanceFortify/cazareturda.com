@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   title: 'Salin Gold Turda - Cazare Premium lângă Salina Turda',
   description: 'Salin Gold - varianta premium lângă Salina Turda. Stil elegant "gold", finisaje de lux, la 20m de Salină. Ușă în ușă cu Maysa.',
   alternates: {
-    canonical: 'https://cazareturda.com/apartamente/ap-salin-gold',
+    canonical: 'https://www.cazareturda.com/apartamente/ap-salin-gold',
   },
   openGraph: {
     title: 'Salin Gold - Cazare Premium Turda',
     description: 'Varianta premium lângă Salina Turda cu stil elegant gold și finisaje de lux.',
-    url: 'https://cazareturda.com/apartamente/ap-salin-gold',
+    url: 'https://www.cazareturda.com/apartamente/ap-salin-gold',
     images: [{ url: apartment.heroImage }],
   },
 };
@@ -53,7 +53,7 @@ const jsonLd = {
   name: apartment.name,
   description: apartment.longDescription,
   image: apartment.galleryImages.map(img => img.src),
-  url: `https://cazareturda.com/${apartment.slug}`,
+  url: `https://www.cazareturda.com/${apartment.slug}`,
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Turda',

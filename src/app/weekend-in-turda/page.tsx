@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Weekend în Turda - Itinerariu Perfect 2 Zile (2026)',
   description: 'Planifică weekendul perfect în Turda: Salina, Cheile Turzii, restaurante, cazare. Itinerariu complet pentru 2-3 zile cu recomandări și prețuri.',
   alternates: {
-    canonical: 'https://cazareturda.com/weekend-in-turda',
+    canonical: 'https://www.cazareturda.com/weekend-in-turda',
   },
 };
 

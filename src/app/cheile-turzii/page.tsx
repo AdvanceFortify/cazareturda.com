@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: 'Cheile Turzii - Ghid Complet Trasee & Drumeții 2026',
   description: 'Ghid complet Cheile Turzii: trasee drumeții, cum ajungi, ce să iei cu tine, perioada ideală de vizitare. Plus cazare apropiată în Turda.',
   alternates: {
-    canonical: 'https://cazareturda.com/cheile-turzii',
+    canonical: 'https://www.cazareturda.com/cheile-turzii',
   },
   openGraph: {
     title: 'Cheile Turzii - Ghid Trasee Drumeții',
     description: 'Rezervație naturală spectaculoasă cu trasee pentru toate nivelurile',
-    url: 'https://cazareturda.com/cheile-turzii',
+    url: 'https://www.cazareturda.com/cheile-turzii',
   },
 };
 

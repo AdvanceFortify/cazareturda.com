@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Turda cu Copiii - Ghid Complet pentru Familii 2026',
   description: 'Ghid complet pentru vizitarea Turdei cu copiii: atracții potrivite, cazare family-friendly, activități, restaurante. Planifică vacanța perfectă!',
   alternates: {
-    canonical: 'https://cazareturda.com/turda-cu-copiii',
+    canonical: 'https://www.cazareturda.com/turda-cu-copiii',
   },
 };
 

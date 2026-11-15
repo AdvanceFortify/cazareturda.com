@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Apartamente Turda - Regim Hotelier, Dotări Complete 2026',
   description: 'Apartamente moderne în Turda: regim hotelier, bucătării utilate, WiFi, parcare gratuită. Prețuri de la 150 lei/noapte. Rezervă acum!',
   alternates: {
-    canonical: 'https://cazareturda.com/apartamente-turda',
+    canonical: 'https://www.cazareturda.com/apartamente-turda',
   },
 };
 
