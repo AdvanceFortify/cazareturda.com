@@ -76,10 +76,6 @@ const jsonLd = {
     '@type': 'LocationFeatureSpecification',
     name: amenity,
   })),
-  starRating: {
-    '@type': 'Rating',
-    ratingValue: '4.9',
-  },
 };
 
 export default function SalinGoldPage() {

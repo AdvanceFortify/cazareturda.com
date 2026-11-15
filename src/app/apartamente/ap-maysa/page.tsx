@@ -77,10 +77,6 @@ const jsonLd = {
     '@type': 'LocationFeatureSpecification',
     name: amenity,
   })),
-  starRating: {
-    '@type': 'Rating',
-    ratingValue: '4.8',
-  },
 };
 
 export default function MaysaPage() {
