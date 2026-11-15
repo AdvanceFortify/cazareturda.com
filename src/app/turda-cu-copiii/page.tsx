@@ -37,7 +37,7 @@ export default function TurdaCuCopiiiPage() {
       <Hero
         title="Turda cu Copiii"
         subtitle="Ghid complet pentru familii: atracții, cazare, activități și sfaturi practice"
-        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Turda cu copiii - vacanță în familie"
         compact
       />
@@ -197,7 +197,7 @@ export default function TurdaCuCopiiiPage() {
           <h2>🍽️ Mâncare cu Copiii în Turda</h2>
           
           <div style={{ display: 'grid', gap: 'var(--spacing-md)' }}>
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="panel">
               <h3>Opțiunea 1: Gătește la Apartament (Recomandat!)</h3>
               <p style={{ color: 'var(--color-text-light)' }}>
                 <strong>Cel mai economic și comod.</strong> Supermarketuri în oraș (Kaufland, Lidl). 
@@ -206,7 +206,7 @@ export default function TurdaCuCopiiiPage() {
               </p>
             </div>
             
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="panel">
               <h3>Opțiunea 2: Restaurante Family-Friendly</h3>
               <p style={{ color: 'var(--color-text-light)' }}>
                 Restaurante cu bucătărie românească (sarmale, mici - copiilor le place!), 
@@ -215,7 +215,7 @@ export default function TurdaCuCopiiiPage() {
               </p>
             </div>
             
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="panel">
               <h3>Opțiunea 3: Combinat</h3>
               <p style={{ color: 'var(--color-text-light)' }}>
                 Micul dejun și cina la apartament, prânzul la restaurant. Echilibru perfect 
@@ -230,7 +230,7 @@ export default function TurdaCuCopiiiPage() {
         <div className="container container-content">
           <h2>📋 Sfaturi Practice pentru Părinți</h2>
           
-          <div style={{ background: 'white', padding: 'var(--spacing-2xl)', borderRadius: 'var(--radius-xl)', boxShadow: 'var(--shadow-lg)' }}>
+          <div className="panel panel-lg">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--spacing-xl)' }}>
               <div>
                 <h3>🎒 Ce să Iei</h3>
@@ -334,7 +334,7 @@ export default function TurdaCuCopiiiPage() {
           </div>
           
           <p style={{ marginTop: 'var(--spacing-xl)' }}>
-            📱 Contactează-ne pe WhatsApp pentru sfaturi personalizate!
+            Contactează-ne pe WhatsApp pentru sfaturi personalizate!
           </p>
         </div>
       </section>

@@ -79,7 +79,7 @@ export default function AtractiiTurdaPage() {
       <Hero
         title="Atracții Turistice în Turda"
         subtitle="Descoperă cele mai importante obiective turistice din Turda și împrejurimi"
-        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Atracții turistice Turda"
         compact
       />

@@ -18,7 +18,7 @@ export default function Itinerariu1ZiTurdaPage() {
       <Hero
         title="Itinerariu 1 Zi în Turda"
         subtitle="Ghid complet cu orar: maximizează experiența într-o singură zi"
-        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Itinerariu Turda"
         compact
       />
@@ -137,7 +137,7 @@ export default function Itinerariu1ZiTurdaPage() {
         <div className="container container-content">
           <h2>💰 Buget Estimativ 1 Zi</h2>
           
-          <div style={{ background: 'white', padding: 'var(--spacing-xl)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-lg)' }}>
+          <div className="panel panel-lg">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--spacing-lg)' }}>
               <div>
                 <h4>🎟️ Intrări</h4>
@@ -163,7 +163,7 @@ export default function Itinerariu1ZiTurdaPage() {
               
               <div style={{ gridColumn: 'span 1' }}>
                 <h3>Total Estimativ:</h3>
-                <p style={{ fontSize: 'var(--font-size-3xl)', fontWeight: 'bold', color: 'var(--color-primary)', margin: 0 }}>
+                <p className="figure">
                   245-265 lei
                 </p>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>
@@ -172,7 +172,7 @@ export default function Itinerariu1ZiTurdaPage() {
               </div>
             </div>
             
-            <div style={{ marginTop: 'var(--spacing-lg)', padding: 'var(--spacing-md)', background: 'var(--color-bg-alt)', borderRadius: 'var(--radius-md)' }}>
+            <div className="note">
               <p><strong>💡 Sfat economisire:</strong> Gătește la apartament și economisești ~100 lei/zi. 
               Vezi <Link href="/apartamente-turda">apartamentele cu bucătărie utilată</Link>.</p>
             </div>

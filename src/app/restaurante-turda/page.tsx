@@ -18,7 +18,7 @@ export default function RestauranteTurdaPage() {
       <Hero
         title="Restaurante în Turda"
         subtitle="De la bucătărie românească tradițională la pizza și cafenele moderne"
-        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Restaurante Turda"
         compact
       />

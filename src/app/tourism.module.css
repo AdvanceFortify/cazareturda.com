@@ -1,78 +1,129 @@
 .intro {
+  position: relative;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  padding-left: clamp(2rem, 5vw, 4rem);
   background-color: white;
-  padding: var(--spacing-xl);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
   margin-bottom: var(--spacing-xl);
 }
 
+.intro::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: clamp(1.75rem, 4vw, 3rem);
+  bottom: clamp(1.75rem, 4vw, 3rem);
+  width: 3px;
+  border-radius: 3px;
+  background-color: var(--secondary);
+}
+
 .intro h2 {
+  font-weight: 500;
+  color: var(--primary);
   margin-bottom: var(--spacing-md);
 }
 
 .intro p {
-  color: var(--color-text-light);
-  line-height: 1.8;
+  color: var(--text-body);
+  line-height: 1.85;
   font-size: var(--font-size-lg);
+}
+
+.intro p:last-child {
+  margin-bottom: 0;
 }
 
 .infoGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-sm);
 }
 
 .infoCard {
   background-color: white;
   padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  text-align: center;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.infoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
 }
 
 .infoCard h3 {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-md);
-  color: var(--color-text);
+  font-size: 1.375rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--line);
+  color: var(--primary);
 }
 
 .infoCard p {
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
   line-height: 1.6;
 }
 
 .infoCard p strong {
-  color: var(--color-text);
+  color: var(--text-dark);
 }
 
+/* Editorial list: rows divided by hairlines instead of boxed cards */
 .attractions {
   display: grid;
-  gap: var(--spacing-lg);
+  border-top: 1px solid var(--line);
 }
 
 .attractionItem {
-  background-color: white;
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  border-left: 4px solid var(--color-primary);
+  position: relative;
+  padding: 2rem 0 2rem clamp(0rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--line);
+  transition: padding-left var(--transition-base), background-color var(--transition-base);
+}
+
+.attractionItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 2px;
+  margin-top: -1px;
+  background-color: var(--secondary);
+  transition: width var(--transition-slow);
+}
+
+.attractionItem:hover::before {
+  width: 100%;
 }
 
 .attractionItem h3 {
-  font-size: var(--font-size-xl);
+  font-size: clamp(1.375rem, 2.4vw, 1.875rem);
+  font-weight: 500;
   margin-bottom: var(--spacing-sm);
-  color: var(--color-text);
+  color: var(--primary);
 }
 
 .attractionItem p {
-  color: var(--color-text-light);
-  line-height: 1.7;
+  color: var(--text-body);
+  line-height: 1.8;
+  max-width: 75ch;
   margin: 0;
+}
+
+.attractionItem p + p {
+  margin-top: var(--spacing-sm);
 }
 
 .tipsList {
   display: grid;
-  gap: var(--spacing-lg);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-sm);
 }
 
 .tip {
@@ -81,44 +132,62 @@
   align-items: flex-start;
   background-color: white;
   padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
 }
 
 .tipIcon {
-  font-size: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--bg-light);
+  font-size: 1.75rem;
+  line-height: 1;
 }
 
 .tip h4 {
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-sm);
-  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary);
 }
 
 .tip p {
-  color: var(--color-text-light);
+  color: var(--text-body);
   line-height: 1.7;
   margin: 0;
 }
 
 .accommodation {
-  background-color: white;
-  padding: var(--spacing-2xl);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
+  position: relative;
+  padding: clamp(2rem, 5vw, 4rem);
+  border-radius: clamp(1.75rem, 4vw, 2.5rem);
+  background:
+    radial-gradient(55% 80% at 100% 0%, rgba(212, 168, 83, 0.24), transparent 70%),
+    var(--primary-dark);
+  color: rgba(255, 255, 255, 0.82);
   text-align: center;
+  overflow: hidden;
 }
 
 .accommodation h2 {
+  font-weight: 500;
+  color: white;
   margin-bottom: var(--spacing-md);
 }
 
 .accommodation p {
   font-size: var(--font-size-lg);
-  color: var(--color-text-light);
+  color: inherit;
   line-height: 1.7;
-  margin-bottom: var(--spacing-lg);
+  max-width: 640px;
+  margin: 0 auto var(--spacing-lg);
 }
 
 .accommodation ul {
@@ -128,18 +197,38 @@
   margin: 0 auto var(--spacing-xl) auto;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
 }
 
 .accommodation li {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-light);
-  padding: var(--spacing-xs) 0;
+  font-size: var(--font-size-base);
+  color: inherit;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--line-light);
+}
+
+.accommodation a:not(:global(.btn)) {
+  color: var(--secondary);
+}
+
+.accommodation :global(.btn-primary) {
+  background-color: var(--secondary);
+  color: var(--primary-deep);
+}
+
+.accommodation :global(.btn-outline) {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.accommodation :global(.btn-outline:hover) {
+  background-color: white;
+  border-color: white;
+  color: var(--primary-deep);
 }
 
 .apartmentLinks {
   display: flex;
-  gap: var(--spacing-md);
+  gap: 0.75rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -149,55 +238,61 @@
 }
 
 .related h2 {
+  font-weight: 500;
+  color: var(--primary);
   margin-bottom: var(--spacing-xl);
 }
 
 .relatedLinks {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-md);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-sm);
 }
 
 .relatedLinks a {
-  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding: 1.5rem 1.75rem;
   background-color: white;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  text-decoration: none;
-  color: var(--color-text);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  text-align: left;
+  color: var(--primary);
   font-weight: 600;
-  font-size: var(--font-size-lg);
-  transition: all var(--transition-base);
-  border: 2px solid transparent;
+  transition: background-color var(--transition-base), color var(--transition-base),
+    border-color var(--transition-base), transform var(--transition-base);
+}
+
+.relatedLinks a::after {
+  content: '→';
+  color: var(--secondary-dark);
+  transition: transform var(--transition-base), color var(--transition-base);
 }
 
 .relatedLinks a:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  transform: translateY(-3px);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.relatedLinks a:hover::after {
+  transform: translateX(4px);
+  color: var(--secondary);
 }
 
 @media (max-width: 768px) {
-  .infoGrid {
+  .tipsList {
     grid-template-columns: 1fr;
   }
-  
+
   .apartmentLinks {
     flex-direction: column;
   }
-  
+
   .tip {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .accommodation {
-    padding: var(--spacing-lg);
-  }
-  
-  .accommodation ul {
-    text-align: center;
   }
 }

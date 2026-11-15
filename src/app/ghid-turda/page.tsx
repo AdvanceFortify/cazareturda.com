@@ -18,7 +18,7 @@ export default function GhidTurdaPage() {
       <Hero
         title="Ghid Complet Turda"
         subtitle="Articole, sfaturi și recomandări pentru o vizită perfectă în Turda"
-        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Ghid turistic Turda"
         compact
       />

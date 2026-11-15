@@ -10,13 +10,13 @@ interface HeroProps {
   compact?: boolean;
 }
 
-export default function Hero({ 
-  title, 
-  subtitle, 
-  imageUrl, 
-  imageAlt, 
+export default function Hero({
+  title,
+  subtitle,
+  imageUrl,
+  imageAlt,
   children,
-  compact = false 
+  compact = false
 }: HeroProps) {
   return (
     <section className={`${styles.hero} ${compact ? styles.compact : ''}`}>
@@ -36,12 +36,15 @@ export default function Hero({
         />
         <div className={styles.overlay} />
       </div>
-      
+
       <div className={`container ${styles.content}`}>
+        <span className={styles.rule} aria-hidden="true" />
         <h1 className={styles.title}>{title}</h1>
         {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
         {children && <div className={styles.actions}>{children}</div>}
       </div>
+
+      <span className={styles.scrollCue} aria-hidden="true" />
     </section>
   );
 }

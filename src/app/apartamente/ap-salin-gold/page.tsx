@@ -100,7 +100,7 @@ export default function SalinGoldPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          📱 Rezervă pe WhatsApp
+          Rezervă pe WhatsApp
         </a>
         <a 
           href={apartment.bookingUrl}

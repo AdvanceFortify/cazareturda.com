@@ -5,9 +5,9 @@ import { guidePosts, getGuidePostBySlug } from '@/data/guides';
 import styles from './article.module.css';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -17,7 +17,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = getGuidePostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getGuidePostBySlug(slug);
   
   if (!post) {
     return {
@@ -42,8 +43,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function GuidePostPage({ params }: PageProps) {
-  const post = getGuidePostBySlug(params.slug);
+export default async function GuidePostPage({ params }: PageProps) {
+  const { slug } = await params;
+  const post = getGuidePostBySlug(slug);
   
   if (!post) {
     notFound();

@@ -22,7 +22,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Contact prin WhatsApp"
             >
-              📱 WhatsApp: {mainWhatsApp}
+              WhatsApp: {mainWhatsApp}
             </a>
           </div>
           
@@ -66,6 +66,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      <div className={styles.wordmark} aria-hidden="true">Cazare Turda</div>
     </footer>
   );
 }

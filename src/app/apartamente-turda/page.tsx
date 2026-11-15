@@ -39,7 +39,7 @@ export default function ApartamenteTurdaPage() {
       <Hero
         title="Apartamente în Turda"
         subtitle="Regim hotelier modern: confort, spațiu și prețuri accesibile în inima Transilvaniei"
-        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Apartamente moderne Turda"
         compact
       />
@@ -103,7 +103,7 @@ export default function ApartamenteTurdaPage() {
         <div className="container container-content">
           <h2>Ce găsești în apartamentele noastre?</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--spacing-lg)' }}>
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }}>
+            <div className="panel">
               <h3>🏠 În Apartament</h3>
               <ul style={{ lineHeight: 2, color: 'var(--color-text-light)' }}>
                 <li>✓ Bucătărie complet utilată</li>
@@ -114,8 +114,8 @@ export default function ApartamenteTurdaPage() {
               </ul>
             </div>
             
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }}>
-              <h3>📱 Tehnologie</h3>
+            <div className="panel">
+              <h3>Tehnologie</h3>
               <ul style={{ lineHeight: 2, color: 'var(--color-text-light)' }}>
                 <li>✓ Smart TV & streaming</li>
                 <li>✓ WiFi ultra-rapid</li>
@@ -125,7 +125,7 @@ export default function ApartamenteTurdaPage() {
               </ul>
             </div>
             
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }}>
+            <div className="panel">
               <h3>🛏️ Confort</h3>
               <ul style={{ lineHeight: 2, color: 'var(--color-text-light)' }}>
                 <li>✓ Lenjerie de calitate</li>
@@ -145,19 +145,19 @@ export default function ApartamenteTurdaPage() {
             Ce poți vizita din apartamentele noastre
           </h2>
           <div style={{ display: 'grid', gap: 'var(--spacing-md)' }}>
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-md)', borderLeft: '4px solid var(--color-primary)' }}>
+            <div className="panel panel-accent">
               <h4>🏛️ <Link href="/salina-turda">Salina Turda</Link> - 5-10 minute</h4>
               <p style={{ color: 'var(--color-text-light)', margin: 0 }}>
                 Cea mai spectaculoasă atracție din zonă, la doar câteva minute cu mașina.
               </p>
             </div>
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-md)', borderLeft: '4px solid var(--color-primary)' }}>
+            <div className="panel panel-accent">
               <h4>🏔️ Cheile Turzii - 20 minute</h4>
               <p style={{ color: 'var(--color-text-light)', margin: 0 }}>
                 Rezervație naturală spectaculoasă, perfectă pentru drumeții și natură.
               </p>
             </div>
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-md)', borderLeft: '4px solid var(--color-primary)' }}>
+            <div className="panel panel-accent">
               <h4>🏰 Centrul Vechi Turda - 5 minute</h4>
               <p style={{ color: 'var(--color-text-light)', margin: 0 }}>
                 Istorie milenară, cetate romană, biserici gotice, muzee.
@@ -185,7 +185,7 @@ export default function ApartamenteTurdaPage() {
             Contactează-ne pe WhatsApp pentru disponibilitate și cele mai bune prețuri!
           </p>
           <Link href="/#apartamente" className="btn btn-whatsapp btn-large">
-            📱 Vezi Apartamentele & Rezervă
+            Vezi Apartamentele & Rezervă
           </Link>
         </div>
       </section>

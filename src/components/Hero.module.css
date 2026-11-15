@@ -1,135 +1,169 @@
 .hero {
   position: relative;
-  width: 100vw;
-  max-width: none;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  min-height: clamp(500px, 70vh, 760px);
+  width: 100%;
+  /* Slides under the transparent sticky header */
+  margin-top: calc(-1 * var(--header-h));
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
   overflow: hidden;
-  background-color: #1a1a1a;
+  background-color: var(--primary-deep);
+  isolation: isolate;
 }
 
 .hero.compact {
-  min-height: clamp(420px, 65vh, 720px);
-  max-height: none;
+  min-height: min(84svh, 820px);
 }
 
 .imageWrapper {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 .image {
   object-fit: cover;
   object-position: center;
-}
-
-/* Apartment detail page image positioning */
-.compact .image {
-  object-position: center;
+  animation: kenburns 16s var(--ease-out) both;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0.6)
-  );
-  z-index: 1;
-}
-
-/* Wide screens (16:9 and wider) */
-@media (min-aspect-ratio: 16/9) {
-  .hero {
-    min-height: clamp(550px, 75vh, 800px);
-  }
-}
-
-/* Ultrawide screens for apartment detail pages */
-@media (min-width: 1600px) {
-  .compact .image {
-    object-position: center;
-  }
+  background:
+    linear-gradient(180deg, rgba(7, 21, 16, 0.55) 0%, rgba(7, 21, 16, 0) 28%),
+    linear-gradient(0deg, rgba(7, 21, 16, 0.94) 0%, rgba(7, 21, 16, 0.55) 42%, rgba(7, 21, 16, 0.12) 78%),
+    linear-gradient(90deg, rgba(7, 21, 16, 0.5) 0%, rgba(7, 21, 16, 0) 65%);
 }
 
 .content {
   position: relative;
-  z-index: 2;
-  text-align: center;
   color: white;
-  padding-top: var(--spacing-xl);
-  padding-bottom: var(--spacing-xl);
+  padding-top: calc(var(--header-h) + 3rem);
+  padding-bottom: clamp(3.5rem, 9vh, 6.5rem);
+}
+
+.rule {
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin-bottom: 1.75rem;
+  background-color: var(--secondary);
+  transform-origin: left;
+  animation: rule-in 900ms var(--ease-out) 100ms both;
 }
 
 .title {
-  font-size: var(--font-size-5xl);
-  font-weight: 800;
-  margin-bottom: var(--spacing-md);
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3);
-  line-height: 1.1;
+  font-size: clamp(2.5rem, 6vw, 5.25rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: white;
+  max-width: 17ch;
+  margin-bottom: 1.5rem;
+  animation: rise 900ms var(--ease-out) 150ms both;
+}
+
+.compact .title {
+  font-size: clamp(2.5rem, 5.4vw, 4.5rem);
 }
 
 .subtitle {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-xl);
-  opacity: 0.95;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 600px;
+  margin-bottom: 2.25rem;
+  animation: rise 900ms var(--ease-out) 280ms both;
 }
 
 .actions {
   display: flex;
-  gap: var(--spacing-md);
-  justify-content: center;
+  gap: 0.875rem;
   flex-wrap: wrap;
+  animation: rise 900ms var(--ease-out) 400ms both;
+}
+
+.actions :global(.btn-outline) {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.actions :global(.btn-outline:hover) {
+  background-color: white;
+  border-color: white;
+  color: var(--primary-deep);
+}
+
+.actions :global(.btn-primary) {
+  background-color: var(--secondary);
+  color: var(--primary-deep);
+}
+
+.actions :global(.btn-primary:hover) {
+  background-color: #E2BB6C;
+  color: var(--primary-deep);
+  box-shadow: 0 14px 30px rgba(212, 168, 83, 0.35);
+}
+
+.scrollCue {
+  position: absolute;
+  right: clamp(1.25rem, 4vw, 2.5rem);
+  bottom: 0;
+  width: 1px;
+  height: 96px;
+  background-color: rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+
+.scrollCue::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--secondary);
+  animation: cue 2.4s var(--ease-out) infinite;
+}
+
+@keyframes kenburns {
+  from { transform: scale(1.12); }
+  to { transform: scale(1); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes rule-in {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes cue {
+  0% { transform: translateY(-100%); }
+  60%, 100% { transform: translateY(100%); }
 }
 
 @media (max-width: 768px) {
-  .hero {
-    min-height: clamp(420px, 60vh, 600px);
-  }
-  
   .hero.compact {
-    min-height: clamp(380px, 55vh, 520px);
+    min-height: 88svh;
   }
-  
-  .image {
-    object-position: center;
+
+  /* Leaves room for the fixed mobile booking bar */
+  .content {
+    padding-bottom: 6rem;
   }
-  
-  .compact .image {
-    object-position: center;
-  }
-  
-  .title {
-    font-size: var(--font-size-3xl);
-  }
-  
-  .subtitle {
-    font-size: var(--font-size-lg);
-  }
-  
+
   .actions {
     flex-direction: column;
-    width: 100%;
   }
-}
 
-@media (max-width: 480px) {
-  .hero {
-    min-height: clamp(400px, 60vh, 550px);
-  }
-  
-  .hero.compact {
-    min-height: clamp(360px, 55vh, 480px);
+  .scrollCue {
+    display: none;
   }
 }

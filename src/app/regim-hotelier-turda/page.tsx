@@ -19,7 +19,7 @@ export default function RegimHotelierPage() {
       <Hero
         title="Regim Hotelier în Turda"
         subtitle="Combinația perfectă: confortul apartamentului tău cu serviciile unui hotel"
-        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Regim hotelier Turda"
         compact
       />
@@ -27,7 +27,7 @@ export default function RegimHotelierPage() {
       <section className="section">
         <div className="container container-content">
           <h2>Ce înseamnă regim hotelier?</h2>
-          <div style={{ background: 'white', padding: 'var(--spacing-2xl)', borderRadius: 'var(--radius-xl)', boxShadow: 'var(--shadow-lg)' }}>
+          <div className="panel panel-lg">
             <p style={{ fontSize: 'var(--font-size-lg)', lineHeight: 1.8, color: 'var(--color-text-light)' }}>
               <strong style={{ color: 'var(--color-text)' }}>Regimul hotelier</strong> înseamnă că 
               îți închiriezi un apartament complet utilat, dar beneficiezi de servicii similare celor 
@@ -83,7 +83,7 @@ export default function RegimHotelierPage() {
         <div className="container container-content">
           <h2>Pentru cine este potrivit regimul hotelier?</h2>
           <div style={{ display: 'grid', gap: 'var(--spacing-md)' }}>
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="panel">
               <h3>👨‍👩‍👧‍👦 Familii cu Copii</h3>
               <p style={{ color: 'var(--color-text-light)' }}>
                 Mai mult spațiu pentru copii să se joace, bucătărie pentru preparate familiare, 
@@ -91,7 +91,7 @@ export default function RegimHotelierPage() {
               </p>
             </div>
             
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="panel">
               <h3>💼 Călătorii de Afaceri</h3>
               <p style={{ color: 'var(--color-text-light)' }}>
                 Spațiu de lucru confortabil, WiFi rapid, liniște, posibilitate de a găti sau 
@@ -99,7 +99,7 @@ export default function RegimHotelierPage() {
               </p>
             </div>
             
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="panel">
               <h3>🎒 Sejururi Lungi</h3>
               <p style={{ color: 'var(--color-text-light)' }}>
                 Pentru sejururi de 3+ zile, apartamentul devine "acasă". Bucătărie, mașină de spălat, 
@@ -107,7 +107,7 @@ export default function RegimHotelierPage() {
               </p>
             </div>
             
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="panel">
               <h3>👥 Grupuri de Prieteni</h3>
               <p style={{ color: 'var(--color-text-light)' }}>
                 Puteți sta împreună într-un apartament spațios în loc de camere separate. 
@@ -123,7 +123,7 @@ export default function RegimHotelierPage() {
           <div className="text-center">
             <h2>De ce să alegi apartamentele noastre?</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--spacing-lg)', marginTop: 'var(--spacing-xl)' }}>
-              <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
+              <div className="panel">
                 <div style={{ fontSize: '2.5rem', marginBottom: 'var(--spacing-sm)' }}>📍</div>
                 <h4>Locații Centrale</h4>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>
@@ -131,7 +131,7 @@ export default function RegimHotelierPage() {
                 </p>
               </div>
               
-              <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
+              <div className="panel">
                 <div style={{ fontSize: '2.5rem', marginBottom: 'var(--spacing-sm)' }}>🅿️</div>
                 <h4>Parcare Gratuită</h4>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>
@@ -139,7 +139,7 @@ export default function RegimHotelierPage() {
                 </p>
               </div>
               
-              <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
+              <div className="panel">
                 <div style={{ fontSize: '2.5rem', marginBottom: 'var(--spacing-sm)' }}>🔑</div>
                 <h4>Check-in Flexibil</h4>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>
@@ -147,7 +147,7 @@ export default function RegimHotelierPage() {
                 </p>
               </div>
               
-              <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
+              <div className="panel">
                 <div style={{ fontSize: '2.5rem', marginBottom: 'var(--spacing-sm)' }}>💬</div>
                 <h4>Suport Non-Stop</h4>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>
@@ -155,7 +155,7 @@ export default function RegimHotelierPage() {
                 </p>
               </div>
               
-              <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
+              <div className="panel">
                 <div style={{ fontSize: '2.5rem', marginBottom: 'var(--spacing-sm)' }}>✨</div>
                 <h4>Curățenie Impecabilă</h4>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>
@@ -163,7 +163,7 @@ export default function RegimHotelierPage() {
                 </p>
               </div>
               
-              <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
+              <div className="panel">
                 <div style={{ fontSize: '2.5rem', marginBottom: 'var(--spacing-sm)' }}>💰</div>
                 <h4>Prețuri Corecte</h4>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>

@@ -47,7 +47,7 @@ export default function CeSaFaciTurdaPage() {
       <Hero
         title="Ce să faci în Turda"
         subtitle="Ghid complet cu activități, restaurante, shopping și agrement pentru un sejur perfect"
-        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Activități în Turda"
         compact
       />

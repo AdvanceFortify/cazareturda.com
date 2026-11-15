@@ -31,7 +31,7 @@ export default function BookingCTA({
               target="_blank"
               rel="noopener noreferrer"
             >
-              📱 Rezervă pe WhatsApp
+              Rezervă pe WhatsApp
             </a>
             
             {showApartmentsButton && (

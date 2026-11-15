@@ -39,7 +39,7 @@ export default function CazareLangaSalinaPage() {
       <Hero
         title="Cazare lângă Salina Turda"
         subtitle="Apartamente moderne la 5-10 minute de cea mai vizitată atracție din Transilvania"
-        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Cazare aproape de Salina Turda"
         compact
       />
@@ -109,7 +109,7 @@ export default function CazareLangaSalinaPage() {
       <section className="section">
         <div className="container container-content">
           <h2>Cum să planifici vizita la Salina Turda</h2>
-          <div style={{ background: 'white', padding: 'var(--spacing-xl)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }}>
+          <div className="panel panel-lg">
             <h3>🕐 Când să vizitezi?</h3>
             <p>
               Cele mai bune momente pentru vizită sunt dimineața (9:00-11:00) când este mai puțin aglomerat. 
@@ -131,7 +131,7 @@ export default function CazareLangaSalinaPage() {
               <li>✓ Bani cash pentru activități extra (bărci, mini-golf)</li>
             </ul>
             
-            <p style={{ marginTop: 'var(--spacing-lg)', padding: 'var(--spacing-md)', background: 'var(--color-bg-alt)', borderRadius: 'var(--radius-md)' }}>
+            <p className="note">
               <strong>💡 Pro Tip:</strong> Rezervă cazarea aproape de Salină cu check-in flexibil. 
               Poți ajunge seara, te odihnești și dimineața ești deja aproape de atracția principală!
             </p>

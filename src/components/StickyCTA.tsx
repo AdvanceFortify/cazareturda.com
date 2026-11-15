@@ -27,7 +27,7 @@ export default function StickyCTA() {
           rel="noopener noreferrer"
           aria-label="Contact WhatsApp pentru rezervare"
         >
-          📱 WhatsApp
+          WhatsApp
         </a>
         <a 
           href="/#apartamente"

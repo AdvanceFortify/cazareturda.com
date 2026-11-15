@@ -18,7 +18,7 @@ export default function WeekendTurdaPage() {
       <Hero
         title="Weekend Perfect în Turda"
         subtitle="Itinerariu complet pentru 2-3 zile: atracții, restaurante, cazare și activități"
-        imageUrl="https://cazareturda.com/images/cazare-turda-aproape-de-salina.webp"
+        imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Weekend în Turda"
         compact
       />
@@ -52,7 +52,7 @@ export default function WeekendTurdaPage() {
                 <p><strong>20:30-22:00:</strong> Plimbare seara prin centrul Turdei</p>
                 <p><strong>22:00+:</strong> Relaxare la apartament</p>
               </div>
-              <p style={{ marginTop: 'var(--spacing-md)', padding: 'var(--spacing-sm)', background: 'var(--color-bg-alt)', borderRadius: 'var(--radius-sm)' }}>
+              <p className="note">
                 <strong>💡 Tip:</strong> Dacă ajungi vineri seara, ai sâmbăta întreagă pentru Salină!
               </p>
             </div>
@@ -118,11 +118,11 @@ export default function WeekendTurdaPage() {
       <section className="section">
         <div className="container container-content">
           <h2>💰 Buget Estimativ Weekend Turda (2 persoane)</h2>
-          <div style={{ background: 'white', padding: 'var(--spacing-xl)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-lg)' }}>
+          <div className="panel panel-lg">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 'var(--spacing-lg)' }}>
               <div>
                 <h4>🏠 Cazare (2 nopți)</h4>
-                <p style={{ fontSize: 'var(--font-size-2xl)', fontWeight: 'bold', color: 'var(--color-primary)' }}>300-400 lei</p>
+                <p className="figure">300-400 lei</p>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>
                   {apartments[0].priceRange} × 2 nopți
                 </p>
@@ -130,7 +130,7 @@ export default function WeekendTurdaPage() {
               
               <div>
                 <h4>🎟️ Bilete Salină</h4>
-                <p style={{ fontSize: 'var(--font-size-2xl)', fontWeight: 'bold', color: 'var(--color-primary)' }}>100 lei</p>
+                <p className="figure">100 lei</p>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>
                   50 lei × 2 persoane
                 </p>
@@ -138,7 +138,7 @@ export default function WeekendTurdaPage() {
               
               <div>
                 <h4>🍽️ Mâncare</h4>
-                <p style={{ fontSize: 'var(--font-size-2xl)', fontWeight: 'bold', color: 'var(--color-primary)' }}>400-600 lei</p>
+                <p className="figure">400-600 lei</p>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>
                   Restaurante + cumpărături
                 </p>
@@ -146,7 +146,7 @@ export default function WeekendTurdaPage() {
               
               <div>
                 <h4>⛽ Transport</h4>
-                <p style={{ fontSize: 'var(--font-size-2xl)', fontWeight: 'bold', color: 'var(--color-primary)' }}>200-300 lei</p>
+                <p className="figure">200-300 lei</p>
                 <p style={{ color: 'var(--color-text-light)', fontSize: 'var(--font-size-sm)' }}>
                   Benzină + parcare
                 </p>
@@ -155,13 +155,13 @@ export default function WeekendTurdaPage() {
             
             <div style={{ marginTop: 'var(--spacing-xl)', paddingTop: 'var(--spacing-lg)', borderTop: '2px solid var(--color-border)', textAlign: 'center' }}>
               <h3>Total Estimativ:</h3>
-              <p style={{ fontSize: 'var(--font-size-4xl)', fontWeight: 'bold', color: 'var(--color-primary)' }}>
+              <p className="figure">
                 1.000 - 1.400 lei
               </p>
               <p style={{ color: 'var(--color-text-light)' }}>Pentru 2 persoane, 2 nopți (weekend complet)</p>
             </div>
             
-            <div style={{ marginTop: 'var(--spacing-lg)', padding: 'var(--spacing-md)', background: 'var(--color-bg-alt)', borderRadius: 'var(--radius-md)' }}>
+            <div className="note">
               <p><strong>💡 Economisește:</strong> Gătește micul dejun și unele mese la apartament 
               (toate au bucătării utilate). Poți economisi 150-200 lei!</p>
             </div>
@@ -176,7 +176,7 @@ export default function WeekendTurdaPage() {
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--spacing-lg)' }}>
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="panel">
               <h3>📋 Înainte de Plecare</h3>
               <ul style={{ lineHeight: 2, color: 'var(--color-text-light)' }}>
                 <li>☐ Rezervă cazare la <Link href="/apartamente-turda">apartament</Link></li>
@@ -186,7 +186,7 @@ export default function WeekendTurdaPage() {
               </ul>
             </div>
             
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="panel">
               <h3>🎒 Ce să Iei</h3>
               <ul style={{ lineHeight: 2, color: 'var(--color-text-light)' }}>
                 <li>☐ Jachetă pentru Salină (10-12°C)</li>
@@ -197,8 +197,8 @@ export default function WeekendTurdaPage() {
               </ul>
             </div>
             
-            <div style={{ background: 'white', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
-              <h3>📱 Contacte Utile</h3>
+            <div className="panel">
+              <h3>Contacte Utile</h3>
               <ul style={{ lineHeight: 2, color: 'var(--color-text-light)' }}>
                 <li>☐ Salvează nr. WhatsApp apartament</li>
                 <li>☐ Programul Salinei: 09:00-17:00</li>
@@ -231,7 +231,7 @@ export default function WeekendTurdaPage() {
             </div>
             
             <p style={{ marginTop: 'var(--spacing-lg)' }}>
-              📱 Contactează-ne pe WhatsApp pentru disponibilitate și reduceri weekend!
+              Contactează-ne pe WhatsApp pentru disponibilitate și reduceri weekend!
             </p>
           </div>
         </div>

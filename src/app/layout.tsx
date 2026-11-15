@@ -1,9 +1,22 @@
 import type { Metadata } from 'next';
+import { Playfair_Display, Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StickyCTA from '@/components/StickyCTA';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
+
+const playfair = Playfair_Display({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-playfair',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://cazareturda.com'),
@@ -111,7 +124,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ro">
+    <html lang="ro" className={`${playfair.variable} ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"
