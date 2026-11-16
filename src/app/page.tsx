@@ -163,7 +163,7 @@ export default function HomePage() {
           <>
             <span className={styles.ratingStars} aria-hidden="true">★★★★★</span>
             <span>
-              <strong>5,0</strong> pe Google · 22 recenzii
+              Apartament Maysa: <strong>5,0</strong> pe Google · 22 recenzii
             </span>
           </>
         }

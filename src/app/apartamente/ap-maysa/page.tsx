@@ -56,10 +56,10 @@ const jsonLd = {
   url: `https://www.cazareturda.com/${apartment.slug}`,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Turda',
+    streetAddress: 'Strada Salinelor 52, Ap. 12, parter',
     addressLocality: 'Turda',
     addressRegion: 'Cluj',
-    postalCode: '401100',
+    postalCode: '407501',
     addressCountry: 'RO',
   },
   geo: {
