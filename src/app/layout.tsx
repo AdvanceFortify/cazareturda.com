@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StickyCTA from '@/components/StickyCTA';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
+import Analytics from '@/components/Analytics';
 
 const playfair = Playfair_Display({
   subsets: ['latin', 'latin-ext'],
@@ -137,6 +138,7 @@ export default function RootLayout({
         <Footer />
         <StickyCTA />
         <WhatsAppCTA />
+        <Analytics />
       </body>
     </html>
   );

@@ -1,0 +1,67 @@
+.banner {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 560px;
+  padding: 1.125rem 1.25rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--primary-deep);
+  border: 1px solid var(--line-light);
+  box-shadow: var(--shadow-xl);
+  color: rgba(255, 255, 255, 0.85);
+  animation: banner-in 500ms var(--ease-out) both;
+}
+
+.text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.btn {
+  width: auto;
+  padding: 0.7rem 1.1rem;
+  font-size: 0.875rem;
+}
+
+.actions :global(.btn-outline) {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.actions :global(.btn-outline:hover) {
+  background-color: white;
+  border-color: white;
+  color: var(--primary-deep);
+}
+
+@keyframes banner-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 768px) {
+  /* Sits above the fixed mobile booking bar */
+  .banner {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: calc(76px + env(safe-area-inset-bottom));
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.875rem;
+  }
+
+  .actions .btn {
+    flex: 1;
+  }
+}
