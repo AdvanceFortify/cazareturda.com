@@ -77,6 +77,11 @@ const jsonLd = {
     '@type': 'LocationFeatureSpecification',
     name: amenity,
   })),
+  // Ministry of Tourism classification certificate no. 40819 (2024-11-03)
+  starRating: {
+    '@type': 'Rating',
+    ratingValue: '3',
+  },
 };
 
 export default function MaysaPage() {
