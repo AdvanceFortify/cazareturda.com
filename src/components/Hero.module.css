@@ -167,3 +167,24 @@
     display: none;
   }
 }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  background-color: rgba(7, 21, 16, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  animation: rise 900ms var(--ease-out) 50ms both;
+}
+
+.badge strong {
+  color: white;
+  font-weight: 600;
+}

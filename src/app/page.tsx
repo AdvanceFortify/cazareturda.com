@@ -159,6 +159,14 @@ export default function HomePage() {
         subtitle="Descoperă confortul apartamentelor în regim hotelier, situate strategic în Turda. Locații centrale, dotări complete și prețuri accesibile."
         imageUrl="/images/cazare-turda-aproape-de-salina.webp"
         imageAlt="Cazare în Turda aproape de Salina Turda – apartamente moderne pentru turiști"
+        badge={
+          <>
+            <span className={styles.ratingStars} aria-hidden="true">★★★★★</span>
+            <span>
+              <strong>5,0</strong> pe Google · 22 recenzii
+            </span>
+          </>
+        }
       >
         <a
           href={getWhatsAppLink(mainWhatsApp, 'Bună! Vreau să rezerv un apartament în Turda.')}

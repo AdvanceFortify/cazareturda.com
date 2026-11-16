@@ -7,6 +7,7 @@ interface HeroProps {
   imageUrl: string;
   imageAlt: string;
   children?: React.ReactNode;
+  badge?: React.ReactNode;
   compact?: boolean;
 }
 
@@ -16,6 +17,7 @@ export default function Hero({
   imageUrl,
   imageAlt,
   children,
+  badge,
   compact = false
 }: HeroProps) {
   return (
@@ -38,6 +40,7 @@ export default function Hero({
       </div>
 
       <div className={`container ${styles.content}`}>
+        {badge && <div className={styles.badge}>{badge}</div>}
         <span className={styles.rule} aria-hidden="true" />
         <h1 className={styles.title}>{title}</h1>
         {subtitle && <p className={styles.subtitle}>{subtitle}</p>}

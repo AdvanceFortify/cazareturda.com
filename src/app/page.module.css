@@ -430,3 +430,8 @@
     grid-column: 1 / -1;
   }
 }
+
+.ratingStars {
+  color: var(--secondary);
+  letter-spacing: 0.1em;
+}
