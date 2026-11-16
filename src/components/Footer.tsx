@@ -62,7 +62,10 @@ export default function Footer() {
             © {new Date().getFullYear()} Cazare Turda. Toate drepturile rezervate.
           </p>
           <p className={styles.disclaimer}>
-            Apartamente în regim hotelier Turda • Cazare lângă Salina Turda
+            Apartamente în regim hotelier Turda • Cazare lângă Salina Turda •{' '}
+            <Link href="/politica-de-confidentialitate" className={styles.legalLink}>
+              Politica de confidențialitate
+            </Link>
           </p>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { useSyncExternalStore } from 'react';
 import Script from 'next/script';
+import Link from 'next/link';
 import styles from './Analytics.module.css';
 
 const GA_ID = 'G-TYDE3E38KZ';
@@ -35,6 +36,33 @@ function choose(value: 'granted' | 'denied') {
   listeners.forEach((listener) => listener());
 }
 
+function resetConsent() {
+  try {
+    window.localStorage.removeItem(STORAGE_KEY);
+  } catch {}
+  const host = window.location.hostname;
+  const domains = ['', host, `.${host}`, `.${host.replace(/^www\./, '')}`];
+  document.cookie
+    .split(';')
+    .map((c) => c.split('=')[0].trim())
+    .filter((name) => name.startsWith('_ga'))
+    .forEach((name) => {
+      domains.forEach((domain) => {
+        document.cookie = `${name}=; Max-Age=0; path=/${domain ? `; domain=${domain}` : ''}`;
+      });
+    });
+  // A reload is the only way to unload gtag once it has run
+  window.location.reload();
+}
+
+export function CookieSettingsButton() {
+  return (
+    <button type="button" className="btn btn-outline" onClick={resetConsent}>
+      Modifică acordul pentru cookie-uri
+    </button>
+  );
+}
+
 export default function Analytics() {
   const consent = useSyncExternalStore(subscribe, getSnapshot, () => 'pending' as Consent);
   const ready = consent !== 'pending';
@@ -56,7 +84,10 @@ gtag('config', '${GA_ID}', { anonymize_ip: true });`}
       {ready && consent === 'unset' && (
         <div className={styles.banner} role="dialog" aria-label="Acord cookie-uri">
           <p className={styles.text}>
-            Folosim cookie-uri Google Analytics ca să vedem cum este folosit site-ul. Le activăm doar cu acordul tău.
+            Folosim cookie-uri Google Analytics ca să vedem cum este folosit site-ul. Le activăm doar cu acordul tău.{' '}
+            <Link href="/politica-de-confidentialitate" className={styles.link}>
+              Detalii
+            </Link>
           </p>
           <div className={styles.actions}>
             <button type="button" className={`btn btn-outline ${styles.btn}`} onClick={() => choose('denied')}>

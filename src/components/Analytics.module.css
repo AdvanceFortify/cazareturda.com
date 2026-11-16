@@ -22,6 +22,16 @@
   line-height: 1.5;
 }
 
+.link {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link:hover {
+  color: white;
+}
+
 .actions {
   display: flex;
   gap: 0.5rem;

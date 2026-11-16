@@ -18,8 +18,8 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  // Guide articles are the only pages without a full-bleed hero under the header
-  const hasHero = !/^\/ghid-turda\/.+/.test(pathname);
+  // Pages without a full-bleed hero under the header
+  const hasHero = !/^\/(ghid-turda\/.+|politica-de-confidentialitate)/.test(pathname);
   const solid = scrolled || !hasHero;
 
   useEffect(() => {
